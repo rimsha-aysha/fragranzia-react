@@ -1,0 +1,90 @@
+/* SIDEBAR */
+
+.sidebar{
+    width: 200px;
+    background: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 0px;
+    margin-right: 0px;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.Dashtar{
+    color: #16a34a;
+    font-size: 34px;
+    margin-bottom:10px;
+}
+
+
+.items{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 18px 0;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+}
+
+/* Link styling */
+.items a{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.items p{
+    margin: 0;
+    font-size: 17px;
+}
+
+.icons{
+    font-size: 18px;
+}
+
+
+.logout-button{
+    width: 120px;
+    height: 45px;
+    border: none;
+    border-radius: 8px;
+    background: #16a34a;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* RIGHT SIDE */
+
+.main-right{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+/* BELL */
+
+.bell{
+    position: relative;
+}
+
+.notification{
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: tomato;
+    color: white;
+    font-size: 11px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

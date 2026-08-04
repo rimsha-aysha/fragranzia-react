@@ -1,0 +1,64 @@
+.success-page{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f8f8f8;
+}
+
+.success-card{
+    width:450px;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 8px 30px rgba(0,0,0,.1);
+}
+
+.success-icon{
+    font-size:70px;
+    color:#2ecc71;
+    margin-bottom:20px;
+}
+
+.success-card h1{
+    margin-bottom:10px;
+}
+
+.success-card h3{
+    font-weight:500;
+    color:#555;
+}
+
+.success-card p{
+    margin:20px 0;
+    color:#777;
+    line-height:24px;
+}
+
+.success-buttons{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+}
+
+.track-btn,
+.home-btn{
+
+    flex:1;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.track-btn{
+    background:#111;
+    color:white;
+}
+
+.home-btn{
+    background:#C48A3A;
+    color:white;
+}

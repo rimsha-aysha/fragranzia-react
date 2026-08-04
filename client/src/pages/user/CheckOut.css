@@ -1,0 +1,344 @@
+.checkout-container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.checkout-left{
+
+    flex:2.3;
+    min-width: 0;
+
+}
+
+.checkout-right{
+
+    flex:1;
+     
+}
+
+.checkout-title{
+
+    margin-bottom:25px;
+    font-size:30px;
+
+}
+
+.product-card{
+    width:100%;
+    display:flex;
+    align-items: center;
+    gap:30px;
+    padding:18px;
+    border-radius:12px;
+    box-sizing: border-box;
+    height: 250px;
+}
+
+.product-card img{
+    width:140px;
+    height:140px;
+}
+
+.product-details{
+    flex: 1;
+    gap:6px;
+}
+
+.product-details h3{
+    font-size:20px;
+}
+
+.product-details h2{
+    font-size:24px;
+}
+.brand{
+    color:#777;
+}
+
+.price-card{
+
+    background:white;
+
+    border-radius:10px;
+
+    padding:25px;
+
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+
+}
+
+.price-card h2{
+
+    margin-bottom:25px;
+
+}
+
+.price-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin:18px 0;
+
+}
+
+.green{
+
+    color:green;
+
+    font-weight:600;
+
+}
+
+.total{
+
+    font-size:20px;
+
+    font-weight:bold;
+
+}
+.section-title{
+
+margin-top:40px;
+
+margin-bottom:20px;
+font-weight: 600;
+
+
+}
+
+.address-list{
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.checkout-address-card{
+    padding:14px;
+    border-radius:10px;
+    margin-bottom:12px;
+    border: 1px solid black;
+}
+
+.checkout-address-card h4{
+    font-size:18px;
+}
+
+.checkout-address-card p{
+    font-size:14px;
+    margin-top:4px;
+}
+
+.checkout-address-card:hover{
+    transform:translateY(-2px);
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+.selected-address{
+    border-color:#C48A3A;
+}
+
+.address-top{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:10px;
+
+}
+
+.address-top span{
+
+background:black;
+
+color:white;
+
+padding:4px 10px;
+
+border-radius:20px;
+
+font-size:13px;
+
+}
+
+.price-card{
+    padding:18px;
+}
+
+.price-card h2{
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+.price-row{
+    margin:10px 0;
+    font-size:15px;
+}
+
+.total{
+    font-size:18px;
+}
+
+.payment-card{
+    margin-top:15px;
+    background:#fff;
+    padding:18px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.payment-card h2{
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+.payment-card label{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:15px;
+    margin:12px 0;
+    cursor:pointer;
+}
+
+.payment-card input{
+    width:16px;
+    height:16px;
+}
+
+.place-order{
+    margin-top:15px;
+    padding:12px;
+    font-size:16px;
+}
+
+.place-order{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#111;
+    color:#fff;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.place-order:hover{
+    background:#C48A3A;
+}
+.checkout-title{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.section-title{
+    font-size:28px;
+    margin:20px 0 12px;
+}
+.box{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 9px;
+    width: 100px;
+    padding-left: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.box h5{
+    margin-top: 6px;
+}
+.paymentpage-btn{
+    border-radius: 3px;
+    background-color: #adacac;
+    padding: 6px;
+    margin-right: 10px;
+    width: 130px;
+    border: none;
+
+}
+.paymentpage-addresstitle{
+    margin-top: 10px;
+}
+.success-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+.success-modal{
+    width:420px;
+    background:#fff;
+    border-radius:15px;
+    padding:35px;
+    text-align:center;
+    animation:popup .25s ease;
+}
+
+.success-icon{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.success-modal h2{
+    margin-bottom:10px;
+}
+
+.success-modal p{
+    color:#666;
+    margin-bottom:25px;
+    line-height:24px;
+}
+
+.success-btns{
+    display:flex;
+    gap:15px;
+}
+
+.success-btns button{
+    flex:1;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.track-btn{
+    background:#111;
+    color:white;
+}
+
+.home-btn{
+    background:#C48A3A;
+    color:white;
+}
+
+@keyframes popup{
+    from{
+        transform:scale(.8);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}

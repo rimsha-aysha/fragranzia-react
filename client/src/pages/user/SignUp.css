@@ -1,0 +1,117 @@
+.img{
+    background-image: url("https://i.pinimg.com/1200x/07/3c/7f/073c7fa0f90948cefa99a64775de4c65.jpg");
+    height: 290px;
+    width: 400px;
+    border-radius: 130px 0px 130px 0px;
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+    margin-left: 150px;
+    margin-top: 100px;
+    background-size: cover;
+}
+.main{
+    display: flex;
+}
+.btn2{
+    margin-left: 70px;
+    margin-top:30px;
+}
+.button{
+    margin-top: 140px;
+    margin-left: 70px;
+}
+.btn1{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 8px;
+    width: 130px;
+    margin-right: 10px;
+}
+.hr{
+    width: 70px;
+}
+.example{
+    display: flex;
+    gap: 21px;
+}
+.line{
+    display: flex;
+    gap: 19px;
+    text-align: center;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+.btn2{
+    margin-left: 50px;
+    margin-top:30px;
+}
+.btn2 input{
+   
+    margin-bottom: 15px;
+    width: 290px;
+    height: 35px;
+    background-color: rgba(182, 188, 189, 0.516);
+    border: none;
+    border-radius: 5px;
+}
+.just {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+ .just input {
+  width: 300px;
+  padding: 10px 10px 10px 40px; 
+  border: 1px solid black;
+  border-radius: 5px;
+} 
+.checkbox-signup{
+    margin-left: -70px;
+    margin-right: -130px;
+}
+
+.icon {
+  position: absolute;
+ margin-top: -16px;
+  left: 10px;
+  font-size: 18px;
+  
+}
+/* .icon{
+    position: absolute;
+    top: 9px;
+    left: 10px;
+}
+.just{
+    position: relative;
+}
+::placeholder{
+  
+   padding-left: 17%;
+} */
+
+.btn3{
+    margin-left: 70px;
+    margin-top: 15px;
+    
+}
+.btn3 button{
+    border: none;
+    background-color: rgb(13, 13, 122);
+    padding: 10px;
+    width: 300px;
+    border-radius: 6px;
+    color: white;
+}
+.lastt{
+   font-size: small;
+   margin-left: 100px;
+   margin-top: 10px;
+}
+.linkk{
+    display: flex;
+    gap: -20px;
+}

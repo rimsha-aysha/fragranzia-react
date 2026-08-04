@@ -1,0 +1,253 @@
+.order-body{
+    width:100%;
+}
+
+.order-top{
+    margin:25px 20px;
+}
+
+
+.order-top h2{
+    font-size:28px;
+    font-weight: 800;
+    margin-bottom:5px;
+    margin-top: -10px;
+}
+.iconandtitle{
+    display: flex;
+    gap: 10px;
+}
+.paragraph{
+    margin: 0px;
+}
+.order-top p{
+    color:gray;
+}
+
+.table-div{
+    background:#fff;
+    margin:10px;
+    border-radius:10px;
+    padding:10px;
+}
+.statuss{
+    border-radius: 8px;
+    padding: 5px;
+    
+   
+}
+.sts-pending{
+    color: red;
+}
+.sts-processing{
+    color: blueviolet;
+}
+.sts-shipped{
+    color: orange;
+}
+.sts-delivery{
+    color: blue;
+}
+
+.sts-delivered{
+    color: green;
+}
+.details-btn{
+    background-color: white;
+    border-radius: 7px;
+    padding: 4px;
+}
+/* Overlay */
+.popup-showdetails {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 20px;
+}
+
+/* Popup Box */
+.showdetails-box {
+  width: 90%;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+  animation: popupShow 0.25s ease;
+}
+
+/* Animation */
+@keyframes popupShow {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Header */
+.showdetails-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #f3f3f3;
+  padding-bottom: 12px;
+  margin-bottom: 18px;
+}
+
+.header-first h5 {
+  font-size: 22px;
+  color: #2d3436;
+  margin-bottom: 5px;
+}
+
+.header-first p {
+  font-size: 13px;
+  color: #888;
+}
+
+/* Three Cards */
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.detail-card {
+  background: #fafbff;
+  border: 1px solid #ececec;
+  border-left: 4px solid #16a34a;
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.detail-card h4,
+.detail-card h6 {
+  margin-bottom: 10px;
+  color: #16a34a;
+  font-size: 15px;
+}
+
+.detail-card p {
+  margin: 4px 0;
+  font-size: 13px;
+  color: #555;
+}
+
+.detail-card h4:first-of-type,
+.detail-card h6:first-of-type {
+  margin-top: 0;
+}
+
+/* Ordered Item */
+.ordered-items {
+  margin-top: 18px;
+}
+
+.ordered-items h4 {
+  color: #16a34a;
+  margin-bottom: 12px;
+}
+
+.ordered-product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fafbff;
+  border: 1px solid #ececec;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.ordered-product img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-info {
+  flex: 1;
+  margin-left: 15px;
+}
+
+.product-info h3 {
+  margin-bottom: 6px;
+  font-size: 17px;
+  color: #333;
+}
+
+.product-info p {
+  color: #666;
+  font-size: 14px;
+}
+
+.price-info {
+  font-size: 18px;
+  font-weight: bold;
+  color: #16a34a;
+}
+
+/* Footer */
+.showdetails-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.closebtn-showdetails {
+  background: #16a34a;
+  color: white;
+  border: none;
+  padding: 10px 26px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.closebtn-showdetails:hover {
+  background: #0dc81d;
+}
+
+/* Laptop Responsive */
+@media (max-width: 900px) {
+  .showdetails-box {
+    max-width: 760px;
+    padding: 18px;
+  }
+
+  .details-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .detail-card {
+    padding: 10px;
+  }
+
+  .detail-card p {
+    font-size: 12px;
+  }
+
+  .ordered-product img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .product-info h3 {
+    font-size: 15px;
+  }
+
+  .price-info {
+    font-size: 16px;
+  }
+}

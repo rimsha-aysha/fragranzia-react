@@ -1,0 +1,414 @@
+.first{
+    background-color: rgb(6, 6, 109);
+   height: 35px;
+   color: white;
+   padding: 5px;
+   text-align: center;
+  
+}
+.body{
+    background-color: white;
+}
+.second{
+    position: relative;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/002/905/921/non_2x/islamic-background-design-with-mosque-silhouette-illustration-can-be-used-for-greetings-card-backdrop-or-banner-free-vector.jpg");
+    height: 380px;
+    width: 1200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 1px;
+    border-radius: 20px;
+    margin-left: 30px;
+    margin-top: 20px;
+
+}
+.perfume1{
+    position: absolute;
+     margin-left: 600px;
+    margin-top:-220px;
+     transform: rotate(-13deg);
+     height: 350px;
+     width: 350px;
+}
+.perfume2{
+    position: absolute;
+    margin-left: 800px;
+    margin-top:-145px ;
+    height: 270px;
+    width: 280px;
+    transform: rotate(20deg);
+}
+.second button{
+    background-color: white;
+    border:none;
+    padding: 7px;
+    width: 100px;
+    font-weight: 500;
+    margin-left: 60px;
+    margin-top: 10px;
+    border-radius: 7px;
+    
+}
+.second p{
+color: white;
+ margin-left: 60px;
+ margin-top: 10px;
+}
+.second h4{
+    color: white;
+     margin-left: 60px;
+    padding-top: 30px;
+    font-size: 35px;
+    
+
+}
+/* .............................................................third........................................... */
+
+.third{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    overflow: hidden;
+}
+.Group{
+    position: absolute;
+right: 160px;
+bottom: 9px;
+}
+
+
+
+.third-in{
+    
+    height: 240px;
+    width: 380px;
+    background-color: rgba(225, 224, 224, 0.737);
+    border-radius: 15px;
+    margin-top: 20px;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+.perfume3{
+   position: absolute;
+   top: -20px;
+   left: 180px;
+   height: 290px;
+   object-fit: cover;
+
+}
+.perfume4{
+  
+   position: absolute;
+   top: 80px;
+   left: 524px;
+  height: 250px;
+  width: 200px;
+
+}
+.perfume5{
+   position: absolute;
+   top: 60px;
+   left: 1040px;
+  height: 290px;
+  width: 200px; 
+  transform: rotate(10deg); 
+}
+
+
+
+.third h4{
+    font-weight: 700;
+    font-size: 23px;
+}
+/* ..............................................................four........................................... */
+
+.four{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-top: 30px;
+    width: 1200px;
+    margin-left: 35px;
+    padding-top: 30px;
+    
+}
+.four i{
+    margin-top: 34px;
+    margin-right: 15px;
+}
+.four-in{
+    display: flex;
+}
+/* ...............................................................five........................................... */
+
+.five{
+    display: flex;
+    gap: 900px;
+    margin-left: 40px;
+    margin-top: 30px;
+    font-weight: 800;
+    font-size: 20px;
+}
+/* ..............................................................six.......................................... */
+
+
+.six{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    gap: 15px;
+    margin-left: 10px;
+   
+}
+.six-in{
+    position: relative;
+}
+
+.heart-icon{
+    position: absolute;
+    left: 260px;
+    top: 20px;
+}
+.image{
+    height: 240px;
+    width: 240px;
+    margin-left: 30px;
+    margin-top: 50px;
+
+   
+}
+.div{
+    border: 2px solid rgb(251, 244, 244);
+  box-shadow: 0 0 10px rgba(170, 168, 168, 0.3);
+    width:300px ;
+    height: 330px;
+    border-radius:  55px 0px 55px 0px ;
+    
+}
+.div1{
+     border: 2px solid rgb(251, 244, 244);
+    box-shadow: 0 0 10px rgba(170, 168, 168, 0.3);
+    width:300px ;
+    height: 330px;
+    border-radius:  0px 55px 0px 55px ; 
+}
+.six-in p{
+    width: 300px;
+    font-size: large;
+    font-weight: 400;
+    margin-top: 19px;
+    margin-bottom: 5px;
+   
+}
+.six-in button{
+    width: 300px;
+    background-color: rgb(6, 6, 109);
+    color: white;
+    height: 45px;
+    margin-top: 0px;
+}
+.six-in h3{
+    font-weight: 500;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+
+
+.seven{
+   
+    text-align: center;
+    
+    margin-top: 100px;
+    margin-bottom: 100px;
+   
+   
+}
+.five-1{
+    display: flex;
+    gap: 920px;
+    margin-left: 40px;
+    margin-top: 30px;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.five-1 div{
+    font-size: larger;
+}
+.see{
+    font-weight: 300;
+}
+.long_img{
+    display: flex;
+    
+    padding-left: 30px;
+    
+}
+.long_img div{
+    position: relative;
+}
+.long_img h1{
+    color: white;
+    position: absolute;
+ bottom: 130px;
+ left: -60px;
+ 
+ transform: rotate(-90deg);
+}
+
+.long{
+    
+    width: 400px;
+    height: 600px;
+}
+
+
+
+
+.eight {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  flex-wrap: wrap; /* responsive */
+}
+
+.eight div {
+  text-align: center;
+}
+
+.eight h5 {
+  margin-top: 15px;
+}
+
+/* Circle */
+.imgg {
+  border: 2px solid rgb(251, 244, 244);
+  box-shadow: 0 0 10px rgba(170, 168, 168, 0.3);
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+
+  display: flex;              /* ⭐ IMPORTANT */
+  justify-content: center;    /* center horizontally */
+  align-items: center;        /* center vertically */
+}
+
+/* Image */
+.image2 {
+  width: 80px;
+  height: 90px;
+  object-fit: contain; /* keeps image clean */
+}
+
+.nine{
+    position: relative;
+    background-image: url("https://img.pikbest.com/background/20180831/blue-gradient-dynamic-light-effect-technology-simple-ppt-background_2746190.jpg!bw700");
+    height: 250px;
+    width: 1200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 1px;
+    background-position: 1px;
+    border-radius: 20px;
+    margin-left: 30px;
+    margin-top: 90px;
+    margin-bottom: 90px;
+}
+.perfume6{
+    position: absolute;
+    top: 2px;
+    right: 130px;
+    height: 250px;
+    width: 250px;
+    transform: rotate(19deg);
+
+}
+.perfume7{
+    position: absolute;
+    top: 30px;
+    right: 260px;
+    height: 200px;
+    width: 220px;
+    transform: rotate(-19deg);
+
+}
+/* ...............................................................nine........................................... */
+
+.nine p{
+color: rgb(23, 20, 20);
+ margin-left: 60px;
+ margin-top: 10px;
+}
+.nine h4{
+    color: rgb(11, 10, 10);
+     margin-left: 60px;
+    padding-top: 60px;
+    font-size: 35px;
+    
+
+}
+.nine button{
+    background-color: rgb(6, 28, 61);
+    color: white;
+    border:none;
+    padding: 8px;
+    border-radius: 5px;
+    width: 100px;
+    font-weight: 500;
+    margin-left: 60px;
+    margin-top: 10px;
+    
+}
+/* ...............................................last............................................................ */
+.last{
+    display: flex;
+    gap: 50px;
+    margin-top: 50px;
+    height: 400px;
+    background-color: rgba(117, 191, 210, 0.982);
+    padding-top: 100px;
+    
+}
+.iconss,.mail,.phone{
+    display: flex;
+    gap: 15px;
+}
+.Fragranzia h1{
+    margin-top: 50px;
+    margin-left: 60px;
+    font-weight:700;
+    color: rgb(6, 6, 78);
+}
+
+.pagess{
+    margin-left: 220px;
+
+}
+.pagess h5{
+    margin-bottom: 30px;
+   font-weight: 700;
+}
+.quick{
+    margin-left: 90px;
+}
+.quick h5{
+   margin-bottom: 30px; 
+   font-weight: 700;
+}
+.mails{
+    margin-left: 60px;
+}
+.social{
+    margin-top: 20px;
+}
+.heart-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.filled {
+  color: red;
+}
