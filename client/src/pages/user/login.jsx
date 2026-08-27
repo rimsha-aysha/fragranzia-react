@@ -33,7 +33,8 @@ export const Login=()=>{
       formData
     );
 
-    localStorage.setItem("token",res.data.role);
+    localStorage.setItem("token", res.data.token);
+localStorage.setItem("role", res.data.role);
 
   await Swal.fire({
   icon: "success",

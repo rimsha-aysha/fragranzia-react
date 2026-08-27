@@ -7,6 +7,7 @@ import { IoLockClosedSharp } from "react-icons/io5";
 import { FaGoogle } from "react-icons/fa";
 import { IoLogoFacebook } from "react-icons/io5";
 import { Link, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -35,7 +36,14 @@ const SignUp = () => {
 
       console.log(response.data);
 
-      alert("Signup completed successfully");
+    await Swal.fire({
+  icon: "success",
+  title: "Success!",
+  text: "Signup completed successfully.",
+  confirmButtonColor: "#3085d6",
+});
+
+navigate("/login");
 
       setFormData({
         name: "",
@@ -47,10 +55,12 @@ const SignUp = () => {
     } catch (error) {
       console.log(error);
 
-      alert(
-        error.response?.data?.message ||
-          "Failed to Signup"
-      );
+      Swal.fire({
+  icon: "error",
+  title: "Signup Failed",
+  text: error.response?.data?.message || "Failed to Signup",
+  confirmButtonColor: "#d33",
+});
     }
   };
 

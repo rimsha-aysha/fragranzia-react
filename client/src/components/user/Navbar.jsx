@@ -30,28 +30,29 @@ export const Navbar = () => {
         <div className="one">
 
           <div className="menu">
-           <Link style={{ color: "rgb(8, 8, 84)", fontWeight: 500 }}
-              className="navbar-brand"
-              href="#"
-  to="/Main"
-  className={location.pathname === "/Main" ? "active" : ""}
->
+            <Link
+              style={{ color: "rgb(8, 8, 84)", fontWeight: 500 }}
+              to="/Main"
+              className={`navbar-brand ${location.pathname === "/Main" ? "active" : ""}`}
+            >
               Home
-              </Link>
-            
-              <Link className="navbar-brand" href="#"
-  to="/products"
-  className={location.pathname === "/products" ? "active" : ""}
->
-  Products
-</Link> 
+            </Link>
+
+            <Link
+              to="/products"
+              className={`navbar-brand ${location.pathname === "/products" ? "active" : ""}`}
+            >
+              Products
+            </Link>
+
             <a className="navbar-brand" href="#">Gifting</a>
-            <Link className="navbar-brand" href="#"
-  to="/About"
-  className={location.pathname === "/About" ? "active" : ""}
->
-  About
-</Link>
+
+            <Link
+              to="/About"
+              className={`navbar-brand ${location.pathname === "/About" ? "active" : ""}`}
+            >
+              About
+            </Link>
           </div>
 
           <div className="lens">

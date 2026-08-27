@@ -1,143 +1,210 @@
-.Showpage-body{
+.Showpage-body {
     /* background-color: white; */
     height: 470px;
 }
 
-.Show-page-main{
+.Show-page-main {
     display: flex;
     position: relative;
 }
 
-.block-btn{
+.block-btn {
     background-color: rgb(17, 156, 17);
     color: white;
     border-radius: 5px;
     border: none;
-    padding: 5px 7px 5px 7px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: opacity 0.2s ease;
+}
+
+.block-btn:hover {
+    opacity: 0.9;
+}
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.edit-btn-1 {
+    background-color: white;
+    border: 1.5px solid #28a745;
+    color: #28a745;
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.edit-btn-1:hover {
+    background-color: #28a745;
+    color: white;
+}
+
+.delete-btn-1 {
+    background-color: white;
+    border: 1.5px solid #dc3545;
+    color: #dc3545;
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.delete-btn-1:hover {
+    background-color: #dc3545;
+    color: white;
 }
 
 
 
-.first-buttons{
+.first-buttons {
     display: flex;
     justify-content: space-between;
     margin-top: 25px;
     margin-left: 20px;
     margin-right: 20px;
 }
-.ex-im-btn{
+
+.ex-im-btn {
     display: flex;
     gap: 10px;
-    
-   
-}
-.ex-im-btn button {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 6px;
-  background-color: white;
-  
-  cursor: pointer;
 
-  /* shadow */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+
 }
-.Add-category-btn{
+
+.ex-im-btn button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: white;
+
+    cursor: pointer;
+
+    /* shadow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.Add-category-btn {
     background-color: rgb(17, 156, 17);
     border-radius: 7px;
     color: white;
-     height: 40px;
+    height: 40px;
     width: 150px;
     border: none;
 }
-.input-search{
+
+.input-search {
     height: 32px;
     margin-left: 20px;
     width: 500px;
     border: none;
     border-radius: 5px;
 }
-.input-category{
+
+.input-category {
     display: flex;
     gap: 20px;
     margin-top: 20px;
-   
+
 }
-.select{
+
+.select {
     width: 250px;
     height: 32px;
-     border: none;
+    border: none;
     border-radius: 5px;
 }
+
 .reset-btn {
-  height: 32px;
-  padding: 0 12px;       /* horizontal spacing */
-  border: none;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;   /* vertical center */
-  justify-content: center;
-  cursor: pointer;
-  background-color: rgb(185, 181, 181);
+    height: 32px;
+    padding: 0 12px;
+    /* horizontal spacing */
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    /* vertical center */
+    justify-content: center;
+    cursor: pointer;
+    background-color: rgb(185, 181, 181);
 }
-.cate{
+
+.cate {
     position: absolute;
     right: 10px;
     top: 10px;
 }
-.last-twobtn-text{
+
+.last-twobtn-text {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 }
-.next-btn,.previous-btn{
+
+.next-btn,
+.previous-btn {
     padding: 5px 7px 5px 7px;
     border-radius: 5px;
-    
+
 }
-.table-div{
-    margin-top:10px;
-    background:white;
-    border-radius:8px;
+
+.table-div-showpage {
+    margin: 10px 20px;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    height: 360px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 /* Keep the table full width */
-table{
-    width:100%;
-    border-collapse:collapse;
-    table-layout:fixed;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
 }
 
 /* Header */
-thead{
-    display:table;
-    width:100%;
-    table-layout:fixed;
+thead {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
 }
 
 /* Body becomes scrollable */
-tbody{
-    display:block;
-    max-height:220px;      /* adjust this height */
-    overflow-y:auto;
+tbody {
+    display: block;
+    max-height: 290px;
+    overflow-y: auto;
 }
 
 /* Rows behave like a table */
-tbody tr{
-    display:table;
-    width:100%;
-    table-layout:fixed;
+tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    height: 55px;
 }
 
-th{
-    background:#f5f5f5;
-    padding:8px;
-    text-align:left;
+th {
+    background: #f5f5f5;
+    padding: 10px 8px;
+    text-align: left;
 }
 
-td{
-    padding:6px;
-    background:white;
-    border-bottom:1px solid #eee;
+td {
+    padding: 10px 8px;
+    background: white;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
 }
-

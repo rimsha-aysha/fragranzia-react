@@ -82,7 +82,7 @@ const products = location.state?.products || [];
         <div className="product-card" key={item._id}>
 
           <img
-            src={`http://localhost:5000/uploads/${item.image}`}
+            src={item.image}
             alt={item.name}
           />
 

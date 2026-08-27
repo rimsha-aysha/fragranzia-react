@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import axios from "../../axios";
 import "./ShowPage.css";
 
 
@@ -44,7 +44,7 @@ const fetchCategories = async () => {
 const handleDelete = async (id) => {
   try {
     await axios.delete(
-      `http://localhost:5000/api/category/${id}`
+      `/api/category/${id}`
     );
 
     alert("category Deleted");
@@ -103,7 +103,7 @@ return(
 )}
 </div>
 
- <div className="table-div">
+ <div className="table-div-showpage">
   <div>
         <table>
              <thead>
@@ -124,9 +124,11 @@ return(
         <td>{item.name}</td>
         <td>{item.description}</td>
         <td>{item.parentCategory}</td>
-       <td>
-          <button className="edit-btn-1" >Edit</button>
-          <button className="delete-btn-1" onClick={() => handleDelete(item._id)}>Delete</button>
+        <td>
+          <div className="action-buttons">
+            <button className="edit-btn-1">Edit</button>
+            <button className="delete-btn-1" onClick={() => handleDelete(item._id)}>Delete</button>
+          </div>
         </td>
         <td><button className="block-btn" >block</button></td>
       </tr>
@@ -144,12 +146,12 @@ return(
         </div>
     </div>
 
-    <div className="last-twobtn-text">
+    {/* <div className="last-twobtn-text">
         <button className="next-btn">Next</button>
         <p>Page 1 of 2</p>
         <button className="previous-btn">Previous</button>
         
-    </div>
+    </div> */}
 
 </div>
 

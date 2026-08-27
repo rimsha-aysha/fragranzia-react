@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Category.css";
-import axios from "axios";
+import axios from "../../axios";
 
 const Category = ({ setShowCategory, fetchCategories }) => {
 
@@ -21,7 +21,7 @@ const Category = ({ setShowCategory, fetchCategories }) => {
     try {
 
       const response = await axios.post(
-        "http://localhost:5000/api/category",
+        "/api/category",
         categoryData
       );
      

@@ -138,7 +138,7 @@ const getMyOrders = async () => {
                   {order.product ? (
   <>
     <img
-      src={`http://localhost:5000/uploads/${order.product.image}`}
+      src={order.product.image}
       alt={order.product.name}
     />
 
@@ -208,7 +208,7 @@ const getMyOrders = async () => {
       <div className="popup-details">
 
         <img
-          src={`http://localhost:5000/uploads/${selectedOrder.product?.image}`}
+          src={selectedOrder.product?.image}
           alt={selectedOrder.product?.name}
         />
 

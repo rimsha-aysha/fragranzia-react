@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Customers.css";
-import axios from "axios";
+import axios from "../../axios";
 
 import { FaUsers, FaSearch, FaEye } from "react-icons/fa";
 
@@ -27,11 +27,11 @@ const Customer = () => {
   const getCustomers = async () => {
     try {
       const usersRes = await axios.get(
-        "http://localhost:5000/api/signUp"
+        "/api/signUp"
       );
 
       const ordersRes = await axios.get(
-        "http://localhost:5000/api/orders"
+        "/api/orders"
       );
 
       const users = usersRes.data;

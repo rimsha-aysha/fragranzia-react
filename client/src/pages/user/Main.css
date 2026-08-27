@@ -1,278 +1,338 @@
-.first{
-    background-color: rgb(6, 6, 109);
-   height: 35px;
-   color: white;
-   padding: 5px;
-   text-align: center;
-  
-}
-.body{
-    background-color: white;
-}
-.second{
-    position: relative;
-    background-image: url("https://static.vecteezy.com/system/resources/previews/002/905/921/non_2x/islamic-background-design-with-mosque-silhouette-illustration-can-be-used-for-greetings-card-backdrop-or-banner-free-vector.jpg");
-    height: 380px;
-    width: 1200px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 1px;
-    border-radius: 20px;
-    margin-left: 30px;
-    margin-top: 20px;
+.first {
+  background-color: rgb(6, 6, 109);
+  height: 35px;
+  color: white;
+  padding: 5px;
+  text-align: center;
 
 }
-.perfume1{
-    position: absolute;
-     margin-left: 600px;
-    margin-top:-220px;
-     transform: rotate(-13deg);
-     height: 350px;
-     width: 350px;
-}
-.perfume2{
-    position: absolute;
-    margin-left: 800px;
-    margin-top:-145px ;
-    height: 270px;
-    width: 280px;
-    transform: rotate(20deg);
-}
-.second button{
-    background-color: white;
-    border:none;
-    padding: 7px;
-    width: 100px;
-    font-weight: 500;
-    margin-left: 60px;
-    margin-top: 10px;
-    border-radius: 7px;
-    
-}
-.second p{
-color: white;
- margin-left: 60px;
- margin-top: 10px;
-}
-.second h4{
-    color: white;
-     margin-left: 60px;
-    padding-top: 30px;
-    font-size: 35px;
-    
 
+.body {
+  background-color: white;
 }
+
+.second {
+  position: relative;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/002/905/921/non_2x/islamic-background-design-with-mosque-silhouette-illustration-can-be-used-for-greetings-card-backdrop-or-banner-free-vector.jpg");
+  height: 380px;
+  width: 1200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 1px;
+  border-radius: 20px;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.perfumee1 {
+  position: absolute;
+  margin-left: 600px;
+  margin-top: -220px;
+  transform: rotate(-25deg);
+  height: 350px;
+  width: 350px;
+}
+
+.perfumee2 {
+  position: absolute;
+  margin-left: 790px;
+  margin-top: -145px;
+  height: 270px;
+  width: 300px;
+  transform: rotate(30deg);
+}
+
+.second button {
+  background-color: white;
+  border: none;
+  padding: 7px;
+  width: 100px;
+  font-weight: 500;
+  margin-left: 60px;
+  margin-top: 10px;
+  border-radius: 7px;
+}
+
+.second p {
+  color: white;
+  margin-left: 60px;
+  margin-top: 10px;
+}
+
+.second h4 {
+  color: white;
+  margin-left: 60px;
+  padding-top: 30px;
+  font-size: 35px;
+}
+
 /* .............................................................third........................................... */
 
-.third{
-    position: relative;
-    display: flex;
-    justify-content: space-evenly;
-    position: relative;
-    overflow: hidden;
-}
-.Group{
-    position: absolute;
-right: 160px;
-bottom: 9px;
+.third {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  overflow: hidden;
 }
 
-
-
-.third-in{
-    
-    height: 240px;
-    width: 380px;
-    background-color: rgba(225, 224, 224, 0.737);
-    border-radius: 15px;
-    margin-top: 20px;
-    padding-left: 30px;
-    padding-top: 20px;
+.Group {
+  position: absolute;
+  right: 160px;
+  bottom: 9px;
 }
-.perfume3{
-   position: absolute;
-   top: -20px;
-   left: 180px;
-   height: 290px;
-   object-fit: cover;
 
+.third-in {
+  height: 240px;
+  width: 380px;
+  background-color: rgba(225, 224, 224, 0.737);
+  border-radius: 15px;
+  margin-top: 20px;
+  padding-left: 30px;
+  padding-top: 20px;
 }
-.perfume4{
-  
-   position: absolute;
-   top: 80px;
-   left: 524px;
+
+.perfume3 {
+  position: absolute;
+  top: -20px;
+  left: 180px;
+  height: 290px;
+  object-fit: cover;
+}
+
+.perfume4 {
+  position: absolute;
+  top: 80px;
+  left: 524px;
   height: 250px;
   width: 200px;
-
 }
-.perfume5{
-   position: absolute;
-   top: 60px;
-   left: 1040px;
+
+.perfume5 {
+  position: absolute;
+  top: 60px;
+  left: 1040px;
   height: 290px;
-  width: 200px; 
-  transform: rotate(10deg); 
+  width: 200px;
+  transform: rotate(10deg);
 }
 
-
-
-.third h4{
-    font-weight: 700;
-    font-size: 23px;
+.third h4 {
+  font-weight: 700;
+  font-size: 23px;
 }
+
 /* ..............................................................four........................................... */
 
-.four{
-    display: flex;
-    justify-content: space-around;
-    border: 1px solid black;
-    border-radius: 15px;
-    margin-top: 30px;
-    width: 1200px;
-    margin-left: 35px;
-    padding-top: 30px;
-    
+.four {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid black;
+  border-radius: 15px;
+  margin-top: 30px;
+  width: 1200px;
+  margin-left: 35px;
+  padding-top: 30px;
 }
-.four i{
-    margin-top: 34px;
-    margin-right: 15px;
+
+.four i {
+  margin-top: 34px;
+  margin-right: 15px;
 }
-.four-in{
-    display: flex;
+
+.four-in {
+  display: flex;
 }
+
 /* ...............................................................five........................................... */
 
-.five{
-    display: flex;
-    gap: 900px;
-    margin-left: 40px;
-    margin-top: 30px;
-    font-weight: 800;
-    font-size: 20px;
+.five {
+  display: flex;
+  gap: 900px;
+  margin-left: 40px;
+  margin-top: 30px;
+  font-weight: 800;
+  font-size: 20px;
 }
+
 /* ..............................................................six.......................................... */
 
-
-.six{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-    gap: 15px;
-    margin-left: 10px;
-   
-}
-.six-in{
-    position: relative;
+.six {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 25px 40px;
 }
 
-.heart-icon{
-    position: absolute;
-    left: 260px;
-    top: 20px;
-}
-.image{
-    height: 240px;
-    width: 240px;
-    margin-left: 30px;
-    margin-top: 50px;
-
-   
-}
-.div{
-    border: 2px solid rgb(251, 244, 244);
-  box-shadow: 0 0 10px rgba(170, 168, 168, 0.3);
-    width:300px ;
-    height: 330px;
-    border-radius:  55px 0px 55px 0px ;
-    
-}
-.div1{
-     border: 2px solid rgb(251, 244, 244);
-    box-shadow: 0 0 10px rgba(170, 168, 168, 0.3);
-    width:300px ;
-    height: 330px;
-    border-radius:  0px 55px 0px 55px ; 
-}
-.six-in p{
-    width: 300px;
-    font-size: large;
-    font-weight: 400;
-    margin-top: 19px;
-    margin-bottom: 5px;
-   
-}
-.six-in button{
-    width: 300px;
-    background-color: rgb(6, 6, 109);
-    color: white;
-    height: 45px;
-    margin-top: 0px;
-}
-.six-in h3{
-    font-weight: 500;
-    font-size: 25px;
-    margin-bottom: 20px;
+/* Hide scrollbar */
+.six::-webkit-scrollbar {
+  display: none;
 }
 
-
-
-.seven{
-   
-    text-align: center;
-    
-    margin-top: 100px;
-    margin-bottom: 100px;
-   
-   
-}
-.five-1{
-    display: flex;
-    gap: 920px;
-    margin-left: 40px;
-    margin-top: 30px;
-    font-weight: 700;
-    font-size: 20px;
-    margin-bottom: 40px;
-}
-.five-1 div{
-    font-size: larger;
-}
-.see{
-    font-weight: 300;
-}
-.long_img{
-    display: flex;
-    
-    padding-left: 30px;
-    
-}
-.long_img div{
-    position: relative;
-}
-.long_img h1{
-    color: white;
-    position: absolute;
- bottom: 130px;
- left: -60px;
- 
- transform: rotate(-90deg);
+.six-in {
+  width: 220px;
+  min-width: 220px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.long{
-    
-    width: 400px;
-    height: 600px;
+.div,
+.div1 {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 1.5px solid rgb(240, 240, 245);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
 }
 
+.div {
+  border-radius: 36px 0px 36px 0px;
+}
 
+.div1 {
+  border-radius: 0px 36px 0px 36px;
+}
 
+.div:hover,
+.div1:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.six-in .image {
+  max-height: 140px;
+  max-width: 140px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.six-in:hover .image {
+  transform: scale(1.05);
+}
+
+.six-in .heart-icon {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 20px;
+  color: #666;
+  cursor: pointer;
+  z-index: 5;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.six-in .heart-icon:hover {
+  transform: scale(1.2);
+}
+
+.six-in .heart-icon.filled {
+  color: #e53e3e;
+}
+
+.six-in p {
+  width: 100%;
+  font-size: 15px;
+  font-weight: 500;
+  color: #2d3748;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.six-in h3 {
+  width: 100%;
+  font-weight: 600;
+  font-size: 17px;
+  color: #1a202c;
+  margin-top: 2px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.six-in button {
+  width: 100%;
+  background-color: rgb(6, 6, 109);
+  color: white;
+  height: 38px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.six-in button:hover {
+  background-color: rgb(15, 15, 140);
+}
+
+.seven {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.five-1 {
+  display: flex;
+  gap: 920px;
+  margin-left: 40px;
+  margin-top: 30px;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.five-1 div {
+  font-size: larger;
+}
+
+.see {
+  font-weight: 300;
+}
+
+.long_img {
+  display: flex;
+  padding-left: 30px;
+}
+
+.long_img div {
+  position: relative;
+}
+
+.long_img h1 {
+  color: white;
+  position: absolute;
+  bottom: 130px;
+  left: -60px;
+  transform: rotate(-90deg);
+}
+
+.long {
+  width: 400px;
+  height: 600px;
+}
 
 .eight {
   display: flex;
   justify-content: space-around;
   margin-top: 30px;
-  flex-wrap: wrap; /* responsive */
+  flex-wrap: wrap;
 }
 
 .eight div {
@@ -284,131 +344,141 @@ bottom: 9px;
 }
 
 /* Circle */
+
 .imgg {
   border: 2px solid rgb(251, 244, 244);
   box-shadow: 0 0 10px rgba(170, 168, 168, 0.3);
   border-radius: 50%;
   width: 150px;
   height: 150px;
-
-  display: flex;              /* ⭐ IMPORTANT */
-  justify-content: center;    /* center horizontally */
-  align-items: center;        /* center vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Image */
+
 .image2 {
   width: 80px;
   height: 90px;
-  object-fit: contain; /* keeps image clean */
+  object-fit: contain;
 }
 
-.nine{
-    position: relative;
-    background-image: url("https://img.pikbest.com/background/20180831/blue-gradient-dynamic-light-effect-technology-simple-ppt-background_2746190.jpg!bw700");
-    height: 250px;
-    width: 1200px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 1px;
-    background-position: 1px;
-    border-radius: 20px;
-    margin-left: 30px;
-    margin-top: 90px;
-    margin-bottom: 90px;
+.nine {
+  position: relative;
+  background-image: url("https://img.pikbest.com/background/20180831/blue-gradient-dynamic-light-effect-technology-simple-ppt-background_2746190.jpg!bw700");
+  height: 250px;
+  width: 1200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 1px;
+  border-radius: 20px;
+  margin-left: 30px;
+  margin-top: 90px;
+  margin-bottom: 90px;
 }
-.perfume6{
-    position: absolute;
-    top: 2px;
-    right: 130px;
-    height: 250px;
-    width: 250px;
-    transform: rotate(19deg);
 
+.perfume6 {
+  position: absolute;
+  top: 2px;
+  right: 130px;
+  height: 250px;
+  width: 250px;
+  transform: rotate(19deg);
 }
-.perfume7{
-    position: absolute;
-    top: 30px;
-    right: 260px;
-    height: 200px;
-    width: 220px;
-    transform: rotate(-19deg);
 
+.perfume7 {
+  position: absolute;
+  top: 30px;
+  right: 260px;
+  height: 200px;
+  width: 220px;
+  transform: rotate(-19deg);
 }
+
 /* ...............................................................nine........................................... */
 
-.nine p{
-color: rgb(23, 20, 20);
- margin-left: 60px;
- margin-top: 10px;
+.nine p {
+  color: rgb(23, 20, 20);
+  margin-left: 60px;
+  margin-top: 10px;
 }
-.nine h4{
-    color: rgb(11, 10, 10);
-     margin-left: 60px;
-    padding-top: 60px;
-    font-size: 35px;
-    
 
+.nine h4 {
+  color: rgb(11, 10, 10);
+  margin-left: 60px;
+  padding-top: 60px;
+  font-size: 35px;
 }
-.nine button{
-    background-color: rgb(6, 28, 61);
-    color: white;
-    border:none;
-    padding: 8px;
-    border-radius: 5px;
-    width: 100px;
-    font-weight: 500;
-    margin-left: 60px;
-    margin-top: 10px;
-    
+
+.nine button {
+  background-color: rgb(6, 28, 61);
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  width: 100px;
+  font-weight: 500;
+  margin-left: 60px;
+  margin-top: 10px;
 }
+
 /* ...............................................last............................................................ */
-.last{
-    display: flex;
-    gap: 50px;
-    margin-top: 50px;
-    height: 400px;
-    background-color: rgba(117, 191, 210, 0.982);
-    padding-top: 100px;
-    
-}
-.iconss,.mail,.phone{
-    display: flex;
-    gap: 15px;
-}
-.Fragranzia h1{
-    margin-top: 50px;
-    margin-left: 60px;
-    font-weight:700;
-    color: rgb(6, 6, 78);
+
+.last {
+  display: flex;
+  gap: 50px;
+  margin-top: 50px;
+  height: 400px;
+  background-color: rgba(117, 191, 210, 0.982);
+  padding-top: 100px;
 }
 
-.pagess{
-    margin-left: 220px;
+.iconss,
+.mail,
+.phone {
+  display: flex;
+  gap: 15px;
+}
 
+.Fragranzia h1 {
+  margin-top: 50px;
+  margin-left: 60px;
+  font-weight: 700;
+  color: rgb(6, 6, 78);
 }
-.pagess h5{
-    margin-bottom: 30px;
-   font-weight: 700;
+
+.pagess {
+  margin-left: 220px;
 }
-.quick{
-    margin-left: 90px;
+
+.pagess h5 {
+  margin-bottom: 30px;
+  font-weight: 700;
 }
-.quick h5{
-   margin-bottom: 30px; 
-   font-weight: 700;
+
+.quick {
+  margin-left: 90px;
 }
-.mails{
-    margin-left: 60px;
+
+.quick h5 {
+  margin-bottom: 30px;
+  font-weight: 700;
 }
-.social{
-    margin-top: 20px;
+
+.mails {
+  margin-left: 60px;
 }
+
+.social {
+  margin-top: 20px;
+}
+
 .heart-icon {
-  font-size: 24px;
+  font-size: 20px;
   cursor: pointer;
 }
 
 .filled {
-  color: red;
+  color: #e53e3e;
 }

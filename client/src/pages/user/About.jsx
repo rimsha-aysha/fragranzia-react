@@ -56,17 +56,17 @@ export const About = () => {
   return (
     <>
 
-    
 
-     <div>
 
-       
+      <div>
 
-        </div>
 
-       
 
-     
+      </div>
+
+
+
+
       {/* ABOUT SECTION */}
 
       <div className="full">
@@ -96,13 +96,13 @@ export const About = () => {
 
           <img className="last-image1" src="caucasian-woman-applying-perfume-her-neck 2.png" alt="Perfume Model" />
 
-          <img className="last-image2" src="caucasian-woman-applying-perfume-her-neck 2 (1).png" alt="Perfume Model" /> 
+          <img className="last-image2" src="caucasian-woman-applying-perfume-her-neck 2 (1).png" alt="Perfume Model" />
 
         </div>
 
       </div>
 
-     
+
     </>
   );
 };

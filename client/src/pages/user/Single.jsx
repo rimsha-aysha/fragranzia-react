@@ -86,21 +86,21 @@ const purchaseNow = () => {
 
             <div>
               <div className="image-divv">
- <img className="img1" src={`http://localhost:5000/uploads/${product.image}`}/> 
+ <img className="img1" src={product.image}/> 
             </div>
 
               <div className="image-div">
- <img className="img1" src={`http://localhost:5000/uploads/${product.image}`}/> 
+ <img className="img1" src={product.image}/> 
               </div>
 
               <div className="image-div">
- <img className="img1" src={`http://localhost:5000/uploads/${product.image}`}/>            
+ <img className="img1" src={product.image}/>            
    </div> </div>
 
             <div>
               <img
                 className="big_img"
-                src={`http://localhost:5000/uploads/${product.image}`}
+                src={product.image}
                  alt={product.name}
                      />
             </div>
