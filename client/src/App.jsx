@@ -3,7 +3,7 @@ import {BrowserRouter,Routes,Route} from "react-router-dom";
 import './App.css'
 import SignUp from './pages/user/SignUp.jsx'
 import  Login  from './pages/user/login.jsx';
-import  Main  from './pages/user/main.jsx';
+import  Main  from './pages/user/Main.jsx';
 import  Products  from './pages/user/Products.jsx';
 import  Single from './pages/user/Single.jsx';
 import ShowPage from './pages/admin/ShowPage.jsx';
