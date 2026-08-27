@@ -1,64 +1,77 @@
-.success-page{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:#f8f8f8;
+/* ==========================================================================
+   ORDER SUCCESS PAGE - FULLY RESPONSIVE
+   ========================================================================== */
+
+.success-page {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f8f8f8;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.success-card{
-    width:450px;
-    background:white;
-    padding:40px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 8px 30px rgba(0,0,0,.1);
+.success-card {
+    width: 100%;
+    max-width: 460px;
+    background: white;
+    padding: 40px 25px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, .08);
+    box-sizing: border-box;
 }
 
-.success-icon{
-    font-size:70px;
-    color:#2ecc71;
-    margin-bottom:20px;
+.success-icon {
+    font-size: 64px;
+    color: #2ecc71;
+    margin-bottom: 18px;
 }
 
-.success-card h1{
-    margin-bottom:10px;
+.success-card h1 {
+    margin-bottom: 10px;
+    font-size: clamp(22px, 3vw, 28px);
+    color: #0f172a;
 }
 
-.success-card h3{
-    font-weight:500;
-    color:#555;
+.success-card h3 {
+    font-weight: 500;
+    color: #64748b;
+    font-size: 16px;
 }
 
-.success-card p{
-    margin:20px 0;
-    color:#777;
-    line-height:24px;
+.success-card p {
+    margin: 18px 0 25px;
+    color: #475569;
+    line-height: 24px;
+    font-size: 14px;
 }
 
-.success-buttons{
-    display:flex;
-    gap:15px;
-    justify-content:center;
+.success-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .track-btn,
-.home-btn{
-
-    flex:1;
-    padding:12px;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
-    font-size:16px;
+.home-btn {
+    flex: 1 1 140px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
 }
 
-.track-btn{
-    background:#111;
-    color:white;
+.track-btn {
+    background: #111;
+    color: white;
 }
 
-.home-btn{
-    background:#C48A3A;
-    color:white;
+.home-btn {
+    background: #C48A3A;
+    color: white;
 }

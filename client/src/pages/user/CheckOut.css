@@ -1,344 +1,349 @@
-.checkout-container{
+/* ==========================================================================
+   CHECKOUT PAGE STYLES - FULLY RESPONSIVE
+   ========================================================================== */
+
+.checkout-container {
     width: 90%;
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 20px auto 60px;
     display: flex;
-    gap: 20px;
+    gap: 30px;
     align-items: flex-start;
 }
 
-.checkout-left{
-
-    flex:2.3;
+.checkout-left {
+    flex: 2.3;
     min-width: 0;
-
+    width: 100%;
 }
 
-.checkout-right{
-
-    flex:1;
-     
-}
-
-.checkout-title{
-
-    margin-bottom:25px;
-    font-size:30px;
-
-}
-
-.product-card{
-    width:100%;
-    display:flex;
-    align-items: center;
-    gap:30px;
-    padding:18px;
-    border-radius:12px;
-    box-sizing: border-box;
-    height: 250px;
-}
-
-.product-card img{
-    width:140px;
-    height:140px;
-}
-
-.product-details{
+.checkout-right {
     flex: 1;
-    gap:6px;
+    min-width: 0;
+    width: 100%;
 }
 
-.product-details h3{
-    font-size:20px;
+.checkout-title {
+    margin-bottom: 20px;
+    font-size: clamp(24px, 3.5vw, 30px);
+    font-weight: 800;
+    color: #0f172a;
 }
 
-.product-details h2{
-    font-size:24px;
-}
-.brand{
-    color:#777;
-}
-
-.price-card{
-
-    background:white;
-
-    border-radius:10px;
-
-    padding:25px;
-
-    box-shadow:0 2px 8px rgba(0,0,0,0.08);
-
+.product-card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 18px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    min-height: 150px;
+    height: auto;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 15px;
 }
 
-.price-card h2{
-
-    margin-bottom:25px;
-
+.product-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #f8fafc;
+    flex-shrink: 0;
 }
 
-.price-row{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    margin:18px 0;
-
+.product-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
-.green{
-
-    color:green;
-
-    font-weight:600;
-
+.product-details h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
 }
 
-.total{
-
-    font-size:20px;
-
-    font-weight:bold;
-
-}
-.section-title{
-
-margin-top:40px;
-
-margin-bottom:20px;
-font-weight: 600;
-
-
+.product-details h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 4px 0 0 0;
 }
 
-.address-list{
-
-display:flex;
-
-flex-direction:column;
-
-gap:20px;
-
+.brand {
+    color: #64748b;
+    font-size: 14px;
 }
 
-.checkout-address-card{
-    padding:14px;
-    border-radius:10px;
-    margin-bottom:12px;
-    border: 1px solid black;
+.price-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e2e8f0;
 }
 
-.checkout-address-card h4{
-    font-size:18px;
+.price-card h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
 }
 
-.checkout-address-card p{
-    font-size:14px;
-    margin-top:4px;
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 14px 0;
+    font-size: 15px;
+    color: #475569;
 }
 
-.checkout-address-card:hover{
-    transform:translateY(-2px);
-    box-shadow:0 5px 18px rgba(0,0,0,.08);
+.green {
+    color: #10b981;
+    font-weight: 600;
 }
 
-.selected-address{
-    border-color:#C48A3A;
+.total {
+    font-size: 18px;
+    font-weight: bold;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 14px;
+    margin-top: 14px;
+    color: #0f172a;
 }
 
-.address-top{
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-margin-bottom:10px;
-
+.section-title {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 22px;
+    color: #0f172a;
 }
 
-.address-top span{
-
-background:black;
-
-color:white;
-
-padding:4px 10px;
-
-border-radius:20px;
-
-font-size:13px;
-
+.address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.price-card{
-    padding:18px;
+.checkout-address-card {
+    padding: 16px 20px;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-.price-card h2{
-    font-size:24px;
-    margin-bottom:15px;
+.checkout-address-card h4 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 6px 0;
 }
 
-.price-row{
-    margin:10px 0;
-    font-size:15px;
+.checkout-address-card p {
+    font-size: 14px;
+    margin: 4px 0;
+    color: #475569;
 }
 
-.total{
-    font-size:18px;
+.checkout-address-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 18px rgba(0, 0, 0, .06);
 }
 
-.payment-card{
-    margin-top:15px;
-    background:#fff;
-    padding:18px;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,.08);
+.selected-address {
+    border: 2px solid #C48A3A;
+    background-color: #fffdfa;
 }
 
-.payment-card h2{
-    font-size:24px;
-    margin-bottom:15px;
+.address-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
-.payment-card label{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    font-size:15px;
-    margin:12px 0;
-    cursor:pointer;
+.address-top span {
+    background: #0f172a;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
 }
 
-.payment-card input{
-    width:16px;
-    height:16px;
+.payment-card {
+    margin-top: 20px;
+    background: #fff;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .04);
+    border: 1px solid #e2e8f0;
 }
 
-.place-order{
-    margin-top:15px;
-    padding:12px;
-    font-size:16px;
+.payment-card h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: #0f172a;
 }
 
-.place-order{
-    width:100%;
-    padding:15px;
-    border:none;
-    border-radius:10px;
-    background:#111;
-    color:#fff;
-    font-size:17px;
-    cursor:pointer;
-    transition:.3s;
+.payment-card label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    margin: 12px 0;
+    cursor: pointer;
+    color: #334155;
 }
 
-.place-order:hover{
-    background:#C48A3A;
-}
-.checkout-title{
-    font-size:28px;
-    margin-bottom:15px;
+.payment-card input {
+    width: 18px;
+    height: 18px;
 }
 
-.section-title{
-    font-size:28px;
-    margin:20px 0 12px;
+.place-order {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #111;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 20px;
 }
-.box{
+
+.place-order:hover {
+    background: #C48A3A;
+}
+
+.box {
     display: flex;
     gap: 15px;
     align-items: center;
-    border: 2px solid black;
-    border-radius: 9px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 8px;
     width: 100px;
-    padding-left: 14px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    padding: 4px 10px;
+    margin: 10px 0;
 }
-.box h5{
-    margin-top: 6px;
+
+.box h5 {
+    margin: 0;
+    font-size: 15px;
 }
-.paymentpage-btn{
-    border-radius: 3px;
-    background-color: #adacac;
-    padding: 6px;
+
+.paymentpage-btn {
+    border-radius: 6px;
+    background-color: #e2e8f0;
+    padding: 8px 16px;
     margin-right: 10px;
-    width: 130px;
     border: none;
-
-}
-.paymentpage-addresstitle{
-    margin-top: 10px;
-}
-.success-overlay{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.45);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    z-index:999;
+    font-weight: 600;
+    cursor: pointer;
 }
 
-.success-modal{
-    width:420px;
-    background:#fff;
-    border-radius:15px;
-    padding:35px;
-    text-align:center;
-    animation:popup .25s ease;
+.success-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
 }
 
-.success-icon{
-    font-size:60px;
-    margin-bottom:15px;
+.success-modal {
+    width: 100%;
+    max-width: 440px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 35px 25px;
+    text-align: center;
+    animation: popup .25s ease;
+    box-sizing: border-box;
 }
 
-.success-modal h2{
-    margin-bottom:10px;
+.success-icon {
+    font-size: 60px;
+    margin-bottom: 15px;
 }
 
-.success-modal p{
-    color:#666;
-    margin-bottom:25px;
-    line-height:24px;
+.success-modal h2 {
+    margin-bottom: 10px;
+    font-size: 22px;
 }
 
-.success-btns{
-    display:flex;
-    gap:15px;
+.success-modal p {
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 24px;
 }
 
-.success-btns button{
-    flex:1;
-    padding:12px;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
-    font-size:15px;
+.success-btns {
+    display: flex;
+    gap: 12px;
 }
 
-.track-btn{
-    background:#111;
-    color:white;
+.success-btns button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
 }
 
-.home-btn{
-    background:#C48A3A;
-    color:white;
+.track-btn {
+    background: #111;
+    color: white;
 }
 
-@keyframes popup{
-    from{
-        transform:scale(.8);
-        opacity:0;
+.home-btn {
+    background: #C48A3A;
+    color: white;
+}
+
+@keyframes popup {
+    from {
+        transform: scale(.8);
+        opacity: 0;
     }
-    to{
-        transform:scale(1);
-        opacity:1;
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+    .checkout-container {
+        flex-direction: column;
+        width: calc(100% - 30px);
+    }
+}
+
+@media (max-width: 600px) {
+    .product-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .success-btns {
+        flex-direction: column;
     }
 }

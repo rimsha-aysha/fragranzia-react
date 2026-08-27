@@ -6,6 +6,17 @@ import { useNavigate } from "react-router-dom";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 import Swal from "sweetalert2";
 
+const getImageSrc = (image) => {
+  if (!image) return "/perfume3-removebg-preview.png";
+  if (typeof image === "string") {
+    if (image.startsWith("http://") || image.startsWith("https://") || image.startsWith("/")) {
+      return image;
+    }
+    return `http://localhost:5000/uploads/${image}`;
+  }
+  return "/perfume3-removebg-preview.png";
+};
+
 export const Main = () => {
    
   const navigate = useNavigate();
@@ -107,6 +118,27 @@ export const Main = () => {
       showConfirmButton: false,
     });
 
+  };
+
+  const removeFromWishlist = (productId) => {
+    const updatedWishlist = wishlist.filter(
+      (item) => item._id !== productId
+    );
+
+    setWishlist(updatedWishlist);
+
+    localStorage.setItem(
+      "wishlist",
+      JSON.stringify(updatedWishlist)
+    );
+
+    Swal.fire({
+      icon: "success",
+      title: "Removed!",
+      text: "Product removed from your wishlist.",
+      timer: 1500,
+      showConfirmButton: false,
+    });
   };
 
 
@@ -231,12 +263,19 @@ export const Main = () => {
             <div className={index % 2 === 0 ? "div1" : "div"}>
                
               <img
-  className="image"
-  src={item.image}
-  alt={item.name}
-/>
+                className="image"
+                src={getImageSrc(item.image)}
+                alt={item.name}
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = "/perfume3-removebg-preview.png";
+                }}
+              />
               {wishlist.some((wish) => wish._id === item._id) ? (
-                <FaHeart className="heart-icon filled" />
+                <FaHeart 
+                  className="heart-icon filled" 
+                  onClick={() => removeFromWishlist(item._id)}
+                />
               ) : (
                 <FaRegHeart
                   className="heart-icon"

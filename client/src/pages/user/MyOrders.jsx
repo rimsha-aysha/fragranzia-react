@@ -5,6 +5,17 @@ import axios from "../../axios";
 import { FaCalendarAlt } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
 
+const getImageSrc = (image) => {
+  if (!image) return "/perfume3-removebg-preview.png";
+  if (typeof image === "string") {
+    if (image.startsWith("http://") || image.startsWith("https://") || image.startsWith("/")) {
+      return image;
+    }
+    return `http://localhost:5000/uploads/${image}`;
+  }
+  return "/perfume3-removebg-preview.png";
+};
+
 const MyOrders = () => {
   const [orders, setOrders] = useState([]);
   const [selectedOrder, setSelectedOrder] = useState(null);
@@ -138,8 +149,12 @@ const getMyOrders = async () => {
                   {order.product ? (
   <>
     <img
-      src={order.product.image}
+      src={getImageSrc(order.product.image)}
       alt={order.product.name}
+      onError={(e) => {
+        e.target.onerror = null;
+        e.target.src = "/perfume3-removebg-preview.png";
+      }}
     />
 
     <div className="product-details">
@@ -208,8 +223,12 @@ const getMyOrders = async () => {
       <div className="popup-details">
 
         <img
-          src={selectedOrder.product?.image}
+          src={getImageSrc(selectedOrder.product?.image)}
           alt={selectedOrder.product?.name}
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = "/perfume3-removebg-preview.png";
+          }}
         />
 
         <div className="details">

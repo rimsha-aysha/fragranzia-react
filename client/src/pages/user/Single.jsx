@@ -6,7 +6,18 @@ import "./Single.css";
 import { FaStar, FaPlus, FaMinus, FaTag } from "react-icons/fa";
 import Swal from "sweetalert2";
 
-export const Single= () =>{
+const getImageSrc = (image) => {
+  if (!image) return "/perfume3-removebg-preview.png";
+  if (typeof image === "string") {
+    if (image.startsWith("http://") || image.startsWith("https://") || image.startsWith("/")) {
+      return image;
+    }
+    return `http://localhost:5000/uploads/${image}`;
+  }
+  return "/perfume3-removebg-preview.png";
+};
+
+export const Single = () => {
 
 const navigate = useNavigate();
     const {id} = useParams();
@@ -86,23 +97,52 @@ const purchaseNow = () => {
 
             <div>
               <div className="image-divv">
- <img className="img1" src={product.image}/> 
-            </div>
-
-              <div className="image-div">
- <img className="img1" src={product.image}/> 
+                <img 
+                  className="img1" 
+                  src={getImageSrc(product.image)}
+                  alt={product.name}
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = "/perfume3-removebg-preview.png";
+                  }}
+                /> 
               </div>
 
               <div className="image-div">
- <img className="img1" src={product.image}/>            
-   </div> </div>
+                <img 
+                  className="img1" 
+                  src={getImageSrc(product.image)}
+                  alt={product.name}
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = "/perfume3-removebg-preview.png";
+                  }}
+                /> 
+              </div>
+
+              <div className="image-div">
+                <img 
+                  className="img1" 
+                  src={getImageSrc(product.image)}
+                  alt={product.name}
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = "/perfume3-removebg-preview.png";
+                  }}
+                />            
+              </div> 
+            </div>
 
             <div>
               <img
                 className="big_img"
-                src={product.image}
-                 alt={product.name}
-                     />
+                src={getImageSrc(product.image)}
+                alt={product.name}
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = "/perfume3-removebg-preview.png";
+                }}
+              />
             </div>
 
           </div>

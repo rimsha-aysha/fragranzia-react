@@ -1,3 +1,7 @@
+/* ==========================================================================
+   ADMIN CUSTOMERS PAGE - FULLY RESPONSIVE
+   ========================================================================== */
+
 .customer-body {
     width: 100%;
 }
@@ -6,7 +10,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 15px 15px 20px;
+    margin: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .customer-title {
@@ -16,9 +22,10 @@
 }
 
 .customer-title h2 {
-    font-size: 26px;
+    font-size: clamp(22px, 3vw, 26px);
     margin: 0;
     font-weight: 700;
+    color: #0f172a;
 }
 
 .search-box {
@@ -26,9 +33,9 @@
     align-items: center;
     gap: 8px;
     background: #fff;
-    padding: 8px 12px;
+    padding: 8px 14px;
     border-radius: 8px;
-    border: 1px solid #ddd;
+    border: 1px solid #e2e8f0;
 }
 
 .search-box input {
@@ -40,58 +47,42 @@
 }
 
 .customer-table {
-    margin: 0 15px;
+    margin: 0 20px;
     background: #fff;
     border-radius: 10px;
     padding: 10px;
-    height: 360px;
+    max-height: 480px;
+    overflow-x: auto;
     overflow-y: auto;
-    overflow-x: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .06);
+    box-sizing: border-box;
 }
 
 .customer-table table {
     width: 100%;
+    min-width: 650px;
     border-collapse: collapse;
-    table-layout: fixed;
-}
-
-.customer-table thead {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-    background: #f8f8f8;
 }
 
 .customer-table th {
     text-align: left;
     padding: 12px 14px;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.customer-table tbody {
-    display: block;
-    max-height: 290px;
-    overflow-y: auto;
-}
-
-.customer-table tbody tr {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-    height: 55px;
+    color: #475569;
+    border-bottom: 1px solid #e2e8f0;
+    background: #f8fafc;
 }
 
 .customer-table td {
     padding: 12px 14px;
     font-size: 14px;
-    border-bottom: 1px solid #f1f1f1;
+    color: #334155;
+    border-bottom: 1px solid #f1f5f9;
 }
 
 .customer-table tbody tr:hover {
-    background: #fafafa;
+    background: #f8fafc;
 }
 
 .view-btn {
@@ -101,33 +92,39 @@
     border: none;
     background: #0d6efd;
     color: #fff;
-    padding: 6px 12px;
+    padding: 6px 14px;
     border-radius: 6px;
     cursor: pointer;
     font-size: 13px;
+    font-weight: 500;
+    transition: background 0.2s ease;
 }
 
 .view-btn:hover {
     background: #0b5ed7;
 }
 
-/* Popup */
-
+/* POPUP */
 .customer-popup {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, .35);
+    background: rgba(0, 0, 0, .45);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 999;
+    z-index: 9999;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
 .customer-popup-box {
-    width: 550px;
+    width: 100%;
+    max-width: 550px;
     background: #fff;
-    border-radius: 12px;
+    border-radius: 14px;
     padding: 25px;
+    box-sizing: border-box;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 .popup-header {
@@ -136,6 +133,8 @@
 
 .popup-header h3 {
     margin: 0;
+    font-size: 20px;
+    color: #0f172a;
 }
 
 .customer-details {
@@ -145,7 +144,8 @@
 }
 
 .detail-item {
-    background: #f8f8f8;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
     padding: 12px;
     border-radius: 8px;
 }
@@ -153,13 +153,14 @@
 .detail-item label {
     display: block;
     font-size: 12px;
-    color: gray;
+    color: #64748b;
     margin-bottom: 5px;
 }
 
 .detail-item p {
     margin: 0;
     font-weight: 600;
+    color: #0f172a;
     word-break: break-word;
 }
 
@@ -173,21 +174,24 @@
     border: none;
     background: #dc3545;
     color: #fff;
-    padding: 8px 18px;
+    padding: 8px 20px;
     border-radius: 6px;
+    font-weight: 600;
     cursor: pointer;
+    transition: background 0.2s ease;
 }
 
 .close-btn:hover {
     background: #bb2d3b;
 }
 
-@media(max-width:768px) {
+/* ================= RESPONSIVE ================= */
 
+@media(max-width: 768px) {
     .customer-top {
+        margin: 15px 10px;
         flex-direction: column;
         align-items: flex-start;
-        gap: 15px;
     }
 
     .search-box {
@@ -199,11 +203,7 @@
     }
 
     .customer-table {
-        overflow-x: auto;
-    }
-
-    .customer-popup-box {
-        width: 95%;
+        margin: 0 10px;
     }
 
     .customer-details {

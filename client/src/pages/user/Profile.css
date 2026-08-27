@@ -1,230 +1,70 @@
-/* NAVBAR */
-
-.navbar{
-    background: white;
-    padding: 14px 40px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-}
-
-/* CONTAINER */
-
-.container{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* LOGO */
-
-.fragrance a{
-    font-size: 30px;
-    font-weight: 700;
-    color: rgb(7, 7, 94);
-    text-decoration: none;
-}
-
-/* RIGHT SIDE */
-
-.one{
-    display: flex;
-    align-items: center;
-    gap: 35px;
-}
-
-/* MENU */
-
-.menu{
-    display: flex;
-    align-items: center;
-    gap: 22px;
-}
-
-.menu a{
-    text-decoration: none;
-    color: rgb(92, 92, 92);
-    font-size: 16px;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.menu a:hover{
-    color: rgb(7, 7, 94);
-}
-
-/* ACTIVE LINK */
-
-.active{
-    color: rgb(7, 7, 94) !important;
-    font-weight: 700;
-}
-
-/* SEARCH BAR */
-
-.lens{
-    position: relative;
-    width: 260px;
-}
-
-.search{
-    width: 100%;
-    height: 42px;
-    border-radius: 25px;
-    border: 1px solid #d6d6d6;
-    padding: 0 15px 0 42px;
-    outline: none;
-    font-size: 14px;
-    transition: 0.3s;
-    background: #f8f8f8;
-}
-
-.search:focus{
-    border-color: rgb(7, 7, 94);
-    background: white;
-}
-
-.search::placeholder{
-    color: gray;
-}
-
-.search-icon{
-    position: absolute;
-    left: 30px;
-    top: 40%;
-    transform: translateY(-50%);
-    color: gray;
-    font-size: 18px;
-}
-
-/* ICONS */
-
-.icons{
-    display: flex;
-    align-items: center;
-    gap: 18px;
-}
-
-.icons svg{
-    font-size: 21px;
-    color: rgb(45,45,45);
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.icons svg:hover{
-    color: rgb(7, 7, 94);
-    transform: scale(1.1);
-}
-
-/* RESPONSIVE */
-
-@media(max-width:992px){
-
-    .navbar{
-        padding: 14px 20px;
-    }
-
-    .one{
-        gap: 20px;
-    }
-
-    .menu{
-        gap: 14px;
-    }
-
-    .lens{
-        width: 200px;
-    }
-}
-
-@media(max-width:768px){
-
-    .container{
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .one{
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .menu{
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .lens{
-        width: 100%;
-    }
-
-    .icons{
-        justify-content: center;
-    }
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* ==========================================================================
+   PROFILE PAGE STYLES - FULLY RESPONSIVE
+   ========================================================================== */
 
 .profile-container {
   width: 100%;
-  min-height: 100vh;
-  padding: 40px 80px;
-  background-color: #f8f8f8;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 80vh;
+  padding: 40px 20px 80px;
+  box-sizing: border-box;
 }
 
 /* ---------- Heading ---------- */
-
 .profile-top h1 {
-  font-size: 48px;
-  font-weight: 700;
-  color: #000;
-  margin-bottom: 10px;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 8px;
 }
 
 .profile-top p {
-  color: #555;
-  font-size: 15px;
+  color: #64748b;
+  font-size: 14px;
 }
 
 .profile-top span {
-  margin: 0 5px;
+  margin: 0 4px;
 }
 
 /* ---------- Tabs ---------- */
-
 .profile-tabs {
   display: flex;
-  gap: 25px;
-  margin-top: 35px;
-  margin-bottom: 40px;
+  gap: 15px;
+  margin-top: 30px;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
 }
 
 .profile-tabs button {
-  width: 180px;
-  height: 50px;
-  border-radius: 6px;
-  border: 1px solid #d9d9d9;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
   background: white;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 500;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.2s ease;
+  color: #334155;
+}
+
+.profile-tabs button:hover {
+  background-color: #f8fafc;
 }
 
 .active-tab {
   background-color: #003b57 !important;
-  color: white;
-  border: none;
+  color: white !important;
+  border-color: #003b57 !important;
+  font-weight: 600 !important;
 }
 
 /* ---------- Form ---------- */
-
 .profile-form {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
 }
 
 .input-group {
@@ -233,60 +73,66 @@
 }
 
 .input-group label {
-  margin-bottom: 10px;
-  font-size: 15px;
+  margin-bottom: 8px;
+  font-size: 14px;
   font-weight: 600;
+  color: #334155;
 }
 
 .input-group input {
   width: 100%;
-  height: 55px;
-  border: none;
+  height: 50px;
+  border: 1px solid #cbd5e1;
   outline: none;
-  background-color: #eaeaea;
-  border-radius: 6px;
+  background-color: #ffffff;
+  border-radius: 8px;
   padding: 0 15px;
-  font-size: 15px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.input-group input:focus {
+  border-color: #003b57;
 }
 
 /* ---------- Password ---------- */
-
 .password-input {
   position: relative;
 }
 
 .password-input input {
   width: 100%;
+  padding-right: 45px;
 }
 
 .eye-icon {
   position: absolute;
   right: 15px;
-  top: 20px;
-  color: #555;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
   cursor: pointer;
 }
 
 /* ---------- Button ---------- */
-
 .edit-btn-container {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  margin-top: 40px;
+  margin-top: 35px;
 }
 
 .edit-btn {
-  width: 120px;
-  height: 45px;
+  padding: 12px 30px;
   border: 2px solid #003b57;
   background: transparent;
   color: #003b57;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.2s ease;
 }
 
 .edit-btn:hover {
@@ -295,31 +141,16 @@
 }
 
 /* ---------- Responsive ---------- */
-
-@media (max-width: 992px) {
-  .profile-form {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .profile-container {
-    padding: 30px 20px;
-  }
-
+@media (max-width: 600px) {
   .profile-form {
     grid-template-columns: 1fr;
-  }
-
-  .profile-tabs {
-    flex-direction: column;
   }
 
   .profile-tabs button {
     width: 100%;
   }
 
-  .profile-top h1 {
-    font-size: 36px;
+  .edit-btn {
+    width: 100%;
   }
 }

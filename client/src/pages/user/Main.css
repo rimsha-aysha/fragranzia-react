@@ -1,172 +1,290 @@
+/* ==========================================================================
+   MAIN (HOME) PAGE STYLES - FULLY RESPONSIVE
+   ========================================================================== */
+
 .first {
   background-color: rgb(6, 6, 109);
-  height: 35px;
+  min-height: 35px;
+  height: auto;
   color: white;
-  padding: 5px;
+  padding: 8px 15px;
   text-align: center;
-
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .body {
   background-color: white;
+  width: 100%;
+  overflow-x: hidden;
 }
+
+/* ================== HERO / SECOND SECTION ================== */
 
 .second {
   position: relative;
   background-image: url("https://static.vecteezy.com/system/resources/previews/002/905/921/non_2x/islamic-background-design-with-mosque-silhouette-illustration-can-be-used-for-greetings-card-backdrop-or-banner-free-vector.jpg");
-  height: 380px;
-  width: 1200px;
+  min-height: 380px;
+  height: auto;
+  width: calc(100% - 40px);
+  max-width: 1200px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 1px;
+  background-position: center;
   border-radius: 20px;
-  margin-left: 30px;
-  margin-top: 20px;
-}
-
-.perfumee1 {
-  position: absolute;
-  margin-left: 600px;
-  margin-top: -220px;
-  transform: rotate(-25deg);
-  height: 350px;
-  width: 350px;
-}
-
-.perfumee2 {
-  position: absolute;
-  margin-left: 790px;
-  margin-top: -145px;
-  height: 270px;
-  width: 300px;
-  transform: rotate(30deg);
-}
-
-.second button {
-  background-color: white;
-  border: none;
-  padding: 7px;
-  width: 100px;
-  font-weight: 500;
-  margin-left: 60px;
-  margin-top: 10px;
-  border-radius: 7px;
-}
-
-.second p {
-  color: white;
-  margin-left: 60px;
-  margin-top: 10px;
+  margin: 20px auto;
+  padding: 40px 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .second h4 {
   color: white;
-  margin-left: 60px;
-  padding-top: 30px;
-  font-size: 35px;
+  margin: 0 0 10px 0;
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: 700;
+  max-width: 500px;
+  line-height: 1.25;
+  z-index: 2;
 }
 
-/* .............................................................third........................................... */
+.second p {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 20px 0;
+  font-size: clamp(14px, 2vw, 16px);
+  max-width: 450px;
+  z-index: 2;
+}
+
+.second button {
+  background-color: white;
+  color: rgb(6, 6, 109);
+  border: none;
+  padding: 10px 24px;
+  width: auto;
+  min-width: 120px;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 2;
+  align-self: flex-start;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.second button:hover {
+  transform: translateY(-2px);
+  background-color: #f8fafc;
+}
+
+.background-removed {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  pointer-events: none;
+}
+
+.perfumee1 {
+  position: absolute;
+  right: 180px;
+  top: 30px;
+  transform: rotate(-25deg);
+  height: 320px;
+  width: auto;
+  max-width: 320px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.perfumee2 {
+  position: absolute;
+  right: 30px;
+  top: 80px;
+  height: 250px;
+  width: auto;
+  max-width: 250px;
+  transform: rotate(30deg);
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* ================== THIRD SECTION (PROMO CARDS) ================== */
 
 .third {
   position: relative;
   display: flex;
-  justify-content: space-evenly;
-  overflow: hidden;
-}
-
-.Group {
-  position: absolute;
-  right: 160px;
-  bottom: 9px;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 30px auto;
 }
 
 .third-in {
+  flex: 1 1 300px;
   height: 240px;
-  width: 380px;
   background-color: rgba(225, 224, 224, 0.737);
   border-radius: 15px;
-  margin-top: 20px;
-  padding-left: 30px;
-  padding-top: 20px;
-}
-
-.perfume3 {
-  position: absolute;
-  top: -20px;
-  left: 180px;
-  height: 290px;
-  object-fit: cover;
-}
-
-.perfume4 {
-  position: absolute;
-  top: 80px;
-  left: 524px;
-  height: 250px;
-  width: 200px;
-}
-
-.perfume5 {
-  position: absolute;
-  top: 60px;
-  left: 1040px;
-  height: 290px;
-  width: 200px;
-  transform: rotate(10deg);
+  padding: 30px 25px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .third h4 {
   font-weight: 700;
-  font-size: 23px;
+  font-size: 20px;
+  color: #1a202c;
+  margin: 0 0 8px 0;
+  z-index: 2;
+  max-width: 60%;
 }
 
-/* ..............................................................four........................................... */
+.third p {
+  color: #4a5568;
+  font-size: 14px;
+  margin: 0;
+  z-index: 2;
+  max-width: 60%;
+}
+
+.perfume3 {
+  position: absolute;
+  right: -10px;
+  bottom: -20px;
+  height: 230px;
+  width: auto;
+  object-fit: contain;
+}
+
+.perfume4 {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  height: 210px;
+  width: auto;
+  object-fit: contain;
+}
+
+.perfume5 {
+  position: absolute;
+  right: 10px;
+  bottom: -10px;
+  height: 220px;
+  width: auto;
+  transform: rotate(10deg);
+  object-fit: contain;
+}
+
+.Group {
+  position: absolute;
+  right: 30px;
+  bottom: 10px;
+  height: 40px;
+  width: auto;
+}
+
+/* ================== FOUR SECTION (TRUST BADGES) ================== */
 
 .four {
   display: flex;
   justify-content: space-around;
-  border: 1px solid black;
+  align-items: center;
+  border: 1px solid #e2e8f0;
   border-radius: 15px;
-  margin-top: 30px;
-  width: 1200px;
-  margin-left: 35px;
-  padding-top: 30px;
-}
-
-.four i {
-  margin-top: 34px;
-  margin-right: 15px;
+  margin: 35px auto;
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  padding: 30px 20px;
+  flex-wrap: wrap;
+  gap: 25px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .four-in {
   display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1 1 250px;
+  justify-content: center;
 }
 
-/* ...............................................................five........................................... */
+.four-in i {
+  font-size: 26px;
+  color: #20488d;
+  flex-shrink: 0;
+}
 
-.five {
+.four-in h5 {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.four-in p {
+  margin: 0;
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+/* ================== SECTION HEADINGS ================== */
+
+.five,
+.five-1 {
   display: flex;
-  gap: 900px;
-  margin-left: 40px;
-  margin-top: 30px;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 35px auto 15px;
   font-weight: 800;
-  font-size: 20px;
+  font-size: clamp(20px, 3vw, 24px);
+  color: #0f172a;
 }
 
-/* ..............................................................six.......................................... */
+.see {
+  font-weight: 500;
+  font-size: 15px;
+  color: #20488d;
+  cursor: pointer;
+}
+
+/* ================== SIX SECTION (PRODUCT CAROUSEL / ROW) ================== */
 
 .six {
   display: flex;
   gap: 24px;
   overflow-x: auto;
   scroll-behavior: smooth;
-  padding: 25px 40px;
+  padding: 20px 20px;
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 0 auto;
+  -webkit-overflow-scrolling: touch;
 }
 
-/* Hide scrollbar */
 .six::-webkit-scrollbar {
-  display: none;
+  height: 6px;
+}
+
+.six::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
 }
 
 .six-in {
@@ -238,7 +356,8 @@
   transform: scale(1.2);
 }
 
-.six-in .heart-icon.filled {
+.six-in .heart-icon.filled,
+.filled {
   color: #e53e3e;
 }
 
@@ -282,203 +401,296 @@
   background-color: rgb(15, 15, 140);
 }
 
+/* ================== SEVEN SECTION (QUOTE) ================== */
+
 .seven {
   text-align: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin: 60px auto;
+  width: calc(100% - 40px);
+  max-width: 900px;
+  padding: 0 15px;
 }
 
-.five-1 {
-  display: flex;
-  gap: 920px;
-  margin-left: 40px;
-  margin-top: 30px;
-  font-weight: 700;
-  font-size: 20px;
-  margin-bottom: 40px;
+.seven h3 {
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 600;
+  color: #1e293b;
+  line-height: 1.6;
+  font-style: italic;
 }
 
-.five-1 div {
-  font-size: larger;
-}
-
-.see {
-  font-weight: 300;
-}
+/* ================== LONG_IMG SECTION (3 FEATURED BANNERS) ================== */
 
 .long_img {
   display: flex;
-  padding-left: 30px;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 0 auto 50px;
 }
 
-.long_img div {
+.long_img > div {
+  flex: 1 1 300px;
   position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
 .long_img h1 {
   color: white;
   position: absolute;
-  bottom: 130px;
-  left: -60px;
-  transform: rotate(-90deg);
+  bottom: 25px;
+  left: 20px;
+  font-size: clamp(20px, 3vw, 26px);
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  transform: none;
 }
 
 .long {
-  width: 400px;
-  height: 600px;
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
 }
+
+.long_img > div:hover .long {
+  transform: scale(1.03);
+}
+
+/* ================== EIGHT SECTION (CATEGORIES) ================== */
 
 .eight {
   display: flex;
-  justify-content: space-around;
-  margin-top: 30px;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px auto 50px;
   flex-wrap: wrap;
+  width: calc(100% - 40px);
+  max-width: 1200px;
 }
 
-.eight div {
+.eight > div {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.eight > div:hover {
+  transform: translateY(-4px);
 }
 
 .eight h5 {
-  margin-top: 15px;
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #334155;
 }
-
-/* Circle */
 
 .imgg {
   border: 2px solid rgb(251, 244, 244);
-  box-shadow: 0 0 10px rgba(170, 168, 168, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  height: 130px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #ffffff;
 }
-
-/* Image */
 
 .image2 {
-  width: 80px;
-  height: 90px;
+  width: 75px;
+  height: 85px;
   object-fit: contain;
 }
+
+/* ================== NINE SECTION (BOTTOM BANNER) ================== */
 
 .nine {
   position: relative;
   background-image: url("https://img.pikbest.com/background/20180831/blue-gradient-dynamic-light-effect-technology-simple-ppt-background_2746190.jpg!bw700");
-  height: 250px;
-  width: 1200px;
+  min-height: 250px;
+  height: auto;
+  width: calc(100% - 40px);
+  max-width: 1200px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 1px;
+  background-position: center;
   border-radius: 20px;
-  margin-left: 30px;
-  margin-top: 90px;
-  margin-bottom: 90px;
-}
-
-.perfume6 {
-  position: absolute;
-  top: 2px;
-  right: 130px;
-  height: 250px;
-  width: 250px;
-  transform: rotate(19deg);
-}
-
-.perfume7 {
-  position: absolute;
-  top: 30px;
-  right: 260px;
-  height: 200px;
-  width: 220px;
-  transform: rotate(-19deg);
-}
-
-/* ...............................................................nine........................................... */
-
-.nine p {
-  color: rgb(23, 20, 20);
-  margin-left: 60px;
-  margin-top: 10px;
+  margin: 50px auto 80px;
+  padding: 40px 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .nine h4 {
   color: rgb(11, 10, 10);
-  margin-left: 60px;
-  padding-top: 60px;
-  font-size: 35px;
+  margin: 0 0 10px 0;
+  font-size: clamp(22px, 3.5vw, 32px);
+  font-weight: 700;
+  z-index: 2;
+  max-width: 500px;
+}
+
+.nine p {
+  color: rgb(40, 40, 40);
+  margin: 0 0 20px 0;
+  font-size: clamp(14px, 2vw, 16px);
+  z-index: 2;
+  max-width: 450px;
 }
 
 .nine button {
   background-color: rgb(6, 28, 61);
   color: white;
   border: none;
-  padding: 8px;
-  border-radius: 5px;
-  width: 100px;
-  font-weight: 500;
-  margin-left: 60px;
-  margin-top: 10px;
-}
-
-/* ...............................................last............................................................ */
-
-.last {
-  display: flex;
-  gap: 50px;
-  margin-top: 50px;
-  height: 400px;
-  background-color: rgba(117, 191, 210, 0.982);
-  padding-top: 100px;
-}
-
-.iconss,
-.mail,
-.phone {
-  display: flex;
-  gap: 15px;
-}
-
-.Fragranzia h1 {
-  margin-top: 50px;
-  margin-left: 60px;
-  font-weight: 700;
-  color: rgb(6, 6, 78);
-}
-
-.pagess {
-  margin-left: 220px;
-}
-
-.pagess h5 {
-  margin-bottom: 30px;
-  font-weight: 700;
-}
-
-.quick {
-  margin-left: 90px;
-}
-
-.quick h5 {
-  margin-bottom: 30px;
-  font-weight: 700;
-}
-
-.mails {
-  margin-left: 60px;
-}
-
-.social {
-  margin-top: 20px;
-}
-
-.heart-icon {
-  font-size: 20px;
+  padding: 10px 24px;
+  border-radius: 8px;
+  width: auto;
+  min-width: 120px;
+  font-weight: 600;
+  font-size: 14px;
   cursor: pointer;
+  z-index: 2;
+  align-self: flex-start;
+  transition: transform 0.2s ease;
 }
 
-.filled {
-  color: #e53e3e;
+.nine button:hover {
+  transform: translateY(-2px);
+}
+
+.perfume6 {
+  position: absolute;
+  top: 10px;
+  right: 100px;
+  height: 230px;
+  width: auto;
+  transform: rotate(19deg);
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.perfume7 {
+  position: absolute;
+  top: 30px;
+  right: 220px;
+  height: 190px;
+  width: auto;
+  transform: rotate(-19deg);
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* ================== RESPONSIVE MEDIA QUERIES ================== */
+
+@media (max-width: 992px) {
+  .second {
+    padding: 35px 25px;
+    min-height: 320px;
+  }
+
+  .perfumee1 {
+    right: 80px;
+    height: 260px;
+  }
+
+  .perfumee2 {
+    right: 10px;
+    height: 200px;
+  }
+
+  .perfume6 {
+    right: 40px;
+    height: 190px;
+  }
+
+  .perfume7 {
+    right: 140px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .background-removed,
+  .perfumee1,
+  .perfumee2,
+  .perfume6,
+  .perfume7 {
+    opacity: 0.25;
+    z-index: 1;
+  }
+
+  .second h4,
+  .second p,
+  .second button,
+  .nine h4,
+  .nine p,
+  .nine button {
+    position: relative;
+    z-index: 2;
+  }
+
+  .four {
+    padding: 20px 15px;
+    gap: 20px;
+  }
+
+  .long {
+    height: 320px;
+  }
+
+  .imgg {
+    width: 100px;
+    height: 100px;
+  }
+
+  .image2 {
+    width: 55px;
+    height: 65px;
+  }
+
+  .eight {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .second,
+  .third,
+  .four,
+  .five,
+  .five-1,
+  .six,
+  .seven,
+  .long_img,
+  .eight,
+  .nine {
+    width: calc(100% - 24px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .third-in {
+    height: auto;
+    min-height: 200px;
+    padding: 20px 15px;
+  }
+
+  .four-in {
+    flex-direction: column;
+    text-align: center;
+  }
 }

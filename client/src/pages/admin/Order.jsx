@@ -4,6 +4,17 @@ import axios from "../../axios";
 import { BsBox2 } from "react-icons/bs";
 import { FaRegEye } from "react-icons/fa";
 
+const getImageSrc = (image) => {
+  if (!image) return "/perfume3-removebg-preview.png";
+  if (typeof image === "string") {
+    if (image.startsWith("http://") || image.startsWith("https://") || image.startsWith("/")) {
+      return image;
+    }
+    return `http://localhost:5000/uploads/${image}`;
+  }
+  return "/perfume3-removebg-preview.png";
+};
+
 const Order = () => {
   const [orders, setOrders] = useState([]);
   const [selectedOrder, setSelectedOrder] = useState(null)
@@ -226,9 +237,13 @@ const Order = () => {
               <div className="ordered-product">
 
                 <img
-  src={selectedOrder.product?.image}
-  alt={selectedOrder.product?.name || "Product"}
-/>
+                  src={getImageSrc(selectedOrder.product?.image)}
+                  alt={selectedOrder.product?.name || "Product"}
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = "/perfume3-removebg-preview.png";
+                  }}
+                />
                 <div className="product-info">
                   <h3>{selectedOrder.product.name}</h3>
 

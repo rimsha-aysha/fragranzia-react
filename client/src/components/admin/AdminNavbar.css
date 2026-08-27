@@ -1,37 +1,116 @@
+/* ==========================================================================
+   ADMIN NAVBAR - FULLY RESPONSIVE
+   ========================================================================== */
+
 .Admin-navbar {
-  /* width: 100%; */
-  background: white;
-  height: 75px;
+  background: #ffffff;
+  min-height: 70px;
+  height: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 35px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  padding: 12px 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #f1f5f9;
+  width: 100%;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
+.nav-left-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.admin-hamburger-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #334155;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
 }
 
 .admin-control-panel {
-  font-size: 30px;
-  font-weight: 600;
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
 }
 
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 16px;
 }
 
-.nav-right p {
-  margin: 0;
-  line-height: 1.4;
-  font-size: 16px;
+.bell {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
-.super-admin {
-  color: gray;
-  font-size: 14px;
+.bell svg {
+  font-size: 20px;
+  color: #64748b;
+}
+
+.notification {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #ef4444;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-right svg {
-  font-size: 24px;
+  font-size: 26px;
+  color: #64748b;
+}
+
+.admin-user-text {
+  margin: 0;
+  line-height: 1.3;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.super-admin {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .admin-hamburger-btn {
+    display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  .Admin-navbar {
+    padding: 10px 15px;
+  }
+
+  .admin-user-text {
+    display: none;
+  }
 }

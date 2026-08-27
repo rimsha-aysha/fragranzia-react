@@ -7,7 +7,18 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 import Swal from "sweetalert2";
 
-const Products = () => {
+const getImageSrc = (image) => {
+  if (!image) return "/perfume3-removebg-preview.png";
+  if (typeof image === "string") {
+    if (image.startsWith("http://") || image.startsWith("https://") || image.startsWith("/")) {
+      return image;
+    }
+    return `http://localhost:5000/uploads/${image}`;
+  }
+  return "/perfume3-removebg-preview.png";
+};
+
+export const Products = () => {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
 
@@ -88,6 +99,27 @@ const Products = () => {
       icon: "success",
       title: "Added!",
       text: "Product added to your wishlist.",
+      timer: 1500,
+      showConfirmButton: false,
+    });
+  };
+
+  const removeFromWishlist = (productId) => {
+    const updatedWishlist = wishlist.filter(
+      (item) => item._id !== productId
+    );
+
+    setWishlist(updatedWishlist);
+
+    localStorage.setItem(
+      "wishlist",
+      JSON.stringify(updatedWishlist)
+    );
+
+    Swal.fire({
+      icon: "success",
+      title: "Removed!",
+      text: "Product removed from your wishlist.",
       timer: 1500,
       showConfirmButton: false,
     });
@@ -394,8 +426,12 @@ const Products = () => {
 
                     <img
                       className="image"
-                      src={item.image}
+                      src={getImageSrc(item.image)}
                       alt={item.name}
+                      onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = "/perfume3-removebg-preview.png";
+                      }}
                     />
 
                     {wishlist.some(
@@ -407,6 +443,7 @@ const Products = () => {
                         onClick={(e) => {
                           e.preventDefault();
                           e.stopPropagation();
+                          removeFromWishlist(item._id);
                         }}
                       />
 

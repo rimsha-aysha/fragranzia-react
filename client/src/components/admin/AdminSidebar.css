@@ -1,4 +1,7 @@
-/* SIDEBAR */
+/* ==========================================================================
+   ADMIN SIDEBAR - FULLY RESPONSIVE
+   ========================================================================== */
+
 .sidebar {
   width: 230px;
   min-width: 230px;
@@ -13,7 +16,8 @@
   border-right: 1px solid #f1f5f9;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.02);
   box-sizing: border-box;
-  z-index: 100;
+  z-index: 1100;
+  transition: transform 0.3s ease;
 }
 
 .sidebar-top {
@@ -23,6 +27,18 @@
 
 .sidebar-logo {
   padding: 0 10px 24px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-close-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  padding: 4px;
 }
 
 .dashtar-brand {
@@ -104,4 +120,26 @@
 
 .logout-icon {
   font-size: 19px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    transform: translateX(-100%);
+    box-shadow: 4px 0 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .sidebar.sidebar-mobile-open {
+    transform: translateX(0);
+  }
+
+  .sidebar-close-btn {
+    display: flex;
+  }
 }

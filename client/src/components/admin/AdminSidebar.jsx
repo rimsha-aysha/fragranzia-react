@@ -6,10 +6,10 @@ import { MdDashboard, MdOutlineLocalOffer } from "react-icons/md";
 import { BiCategory } from "react-icons/bi";
 import { BsGrid3X3Gap } from "react-icons/bs";
 import { HiOutlineUsers } from "react-icons/hi2";
-import { IoCartOutline } from "react-icons/io5";
+import { IoCartOutline, IoClose } from "react-icons/io5";
 import { TbLogout } from "react-icons/tb";
 
-export const AdminSidebar = () => {
+export const AdminSidebar = ({ isOpen, onClose }) => {
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -17,6 +17,10 @@ export const AdminSidebar = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("admin");
     navigate("/adminlogin");
+  };
+
+  const handleNavClick = () => {
+    if (onClose) onClose();
   };
 
   const navItems = [
@@ -29,10 +33,17 @@ export const AdminSidebar = () => {
   ];
 
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${isOpen ? "sidebar-mobile-open" : ""}`}>
       <div className="sidebar-top">
         <div className="sidebar-logo">
           <h2 className="dashtar-brand">Dashtar</h2>
+          <button 
+            className="sidebar-close-btn" 
+            onClick={onClose} 
+            aria-label="Close sidebar"
+          >
+            <IoClose size={22} />
+          </button>
         </div>
 
         <nav className="sidebar-nav">
@@ -43,6 +54,7 @@ export const AdminSidebar = () => {
                 key={item.path}
                 to={item.path}
                 className={`sidebar-nav-item ${isActive ? "active" : ""}`}
+                onClick={handleNavClick}
               >
                 {item.icon}
                 <span className="sidebar-nav-label">{item.name}</span>

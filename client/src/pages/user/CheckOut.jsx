@@ -4,6 +4,17 @@ import "./CheckOut.css";
 import { useNavigate, useLocation } from "react-router-dom";
 import axios from "../../axios";
 
+const getImageSrc = (image) => {
+  if (!image) return "/perfume3-removebg-preview.png";
+  if (typeof image === "string") {
+    if (image.startsWith("http://") || image.startsWith("https://") || image.startsWith("/")) {
+      return image;
+    }
+    return `http://localhost:5000/uploads/${image}`;
+  }
+  return "/perfume3-removebg-preview.png";
+};
+
 const Checkout = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -82,8 +93,12 @@ const products = location.state?.products || [];
         <div className="product-card" key={item._id}>
 
           <img
-            src={item.image}
+            src={getImageSrc(item.image)}
             alt={item.name}
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src = "/perfume3-removebg-preview.png";
+            }}
           />
 
           <div className="product-details">

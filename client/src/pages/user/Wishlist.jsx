@@ -1,122 +1,116 @@
 import React, { useEffect, useState } from "react";
 import "./Cart.css";
-import { FaPlus, FaMinus, FaShare } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
-
 import { useNavigate } from "react-router-dom";
+
+const getImageSrc = (image) => {
+  if (!image) return "/perfume3-removebg-preview.png";
+  if (typeof image === "string") {
+    if (image.startsWith("http://") || image.startsWith("https://") || image.startsWith("/")) {
+      return image;
+    }
+    return `http://localhost:5000/uploads/${image}`;
+  }
+  return "/perfume3-removebg-preview.png";
+};
 
 const Wishlist = () => {
   const [wishlistItems, setWishlistItems] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const wishlist =
-      JSON.parse(localStorage.getItem("wishlist")) || [];
-
+    const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
     setWishlistItems(wishlist);
   }, []);
 
   const moveToCart = (product) => {
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push(product);
+    localStorage.setItem("cart", JSON.stringify(cart));
 
-  cart.push(product);
+    const updatedWishlist = wishlistItems.filter(
+      (item) => item._id !== product._id
+    );
+    setWishlistItems(updatedWishlist);
+    localStorage.setItem("wishlist", JSON.stringify(updatedWishlist));
 
-  localStorage.setItem("cart", JSON.stringify(cart));
-
-  const updatedWishlist = wishlistItems.filter(
-    (item) => item._id !== product._id
-  );
-
-  setWishlistItems(updatedWishlist);
-
-  localStorage.setItem(
-    "wishlist",
-    JSON.stringify(updatedWishlist)
-  );
-
-  navigate("/cart");
-};
+    navigate("/cart");
+  };
 
   const removeFromWishlist = (id) => {
-  const updatedWishlist = wishlistItems.filter(
-    (item) => item._id !== id
-  );
+    const updatedWishlist = wishlistItems.filter(
+      (item) => item._id !== id
+    );
+    setWishlistItems(updatedWishlist);
+    localStorage.setItem("wishlist", JSON.stringify(updatedWishlist));
+  };
 
-  setWishlistItems(updatedWishlist);
-
-  localStorage.setItem(
-    "wishlist",
-    JSON.stringify(updatedWishlist)
-  );
-};
-
- 
   return (
-<div>
-    
-    <div className="main">
-        
-      {/* ---------------- Main First ---------------- */}
-      <div className="main-first">
-        <div className="cart">
-          <h3>Wishlist</h3>
-          <p>Home {">"} Wishlist</p>
+    <div>
+      <div className="main">
+        {/* ---------------- Main First ---------------- */}
+        <div className="main-first">
+          <div className="cart">
+            <h3>Wishlist</h3>
+            <p>Home {">"} Wishlist</p>
+          </div>
+
+          {wishlistItems.length === 0 ? (
+            <h3>No items in wishlist</h3>
+          ) : (
+            wishlistItems.map((item) => (
+              <div className="cart-box" key={item._id}>
+                <div>
+                  <img
+                    className="big_img"
+                    src={getImageSrc(item.image)}
+                    alt={item.name}
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = "/perfume3-removebg-preview.png";
+                    }}
+                  />
+                </div>
+
+                <div>
+                  <h5>{item.name}</h5>
+
+                  <div className="rupees">
+                    <h2 style={{ fontWeight: "700" }}>
+                      Rs {item.productPrice}
+                    </h2>
+
+                    {item.oldPrice && (
+                      <h6
+                        style={{
+                          textDecoration: "line-through",
+                          fontWeight: "100",
+                        }}
+                      >
+                        Rs {item.oldPrice}
+                      </h6>
+                    )}
+                  </div>
+
+                  <button
+                    className="delete"
+                    onClick={() => removeFromWishlist(item._id)}
+                  >
+                    <MdDelete /> Delete
+                  </button>
+
+                  <button
+                    className="buy"
+                    onClick={() => moveToCart(item)}
+                  >
+                    Move To Cart
+                  </button>
+                </div>
+              </div>
+            ))
+          )}
         </div>
-
-        {wishlistItems.length === 0 ? (
-  <h3>No items in wishlist</h3>
-) : (
-  wishlistItems.map((item) => (
-    <div className="cart-box" key={item._id}>
-      <div>
-        <img
-          className="big_img"
-          src={item.image}
-          alt={item.name}
-        />
       </div>
-
-      <div>
-        <h5>{item.name}</h5>
-
-        <div className="rupees">
-          <h2 style={{ fontWeight: "700" }}>
-            Rs {item.productPrice}
-          </h2>
-
-          <h6
-            style={{
-              textDecoration: "line-through",
-              fontWeight: "100",
-            }}
-          >
-            Rs {item.oldPrice}
-          </h6>
-        </div>
-
-        <button
-          className="delete"
-          onClick={() => removeFromWishlist(item._id)}
-        >
-          <MdDelete /> Delete
-        </button>
-
-       
-
-        <button
-          className="buy"
-          onClick={() => moveToCart(item)}
-        >
-          Move To Cart
-        </button>
-      </div>
-    </div>
-  ))
-)}
-      </div>
-
-     
-      </div>
-   
     </div>
   );
 };

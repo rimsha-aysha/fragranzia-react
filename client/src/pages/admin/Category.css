@@ -1,42 +1,72 @@
-.cancel-btn{
-    background-color: red;
-    border-radius: 5px;
-    color: white;
-    border: none;
-     padding: 5px 10px 5px 10px;
+/* ==========================================================================
+   ADMIN CATEGORY POPUP - FULLY RESPONSIVE
+   ========================================================================== */
 
-}
-.addCategory-btn{
-    background-color: green;
-    color: white;
-    border-radius: 5px;
-    border: none;
-    padding: 5px 10px 5px 10px;
-}
-.Category-box{
+.Category-box {
     background-color: white;
-    height: 100vh;
-    width: 350px;
-
+    width: 100%;
+    max-width: 360px;
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+    border: 1px solid #e2e8f0;
 }
-.two-btns{
+
+.category-eachSelect {
+    width: 100%;
+}
+
+.name,
+.description,
+.parent-category {
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.category-eachSelect input,
+.select-none {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+    box-sizing: border-box;
+    background: #ffffff;
+}
+
+.category-eachSelect input:focus,
+.select-none:focus {
+    border-color: #10b981;
+}
+
+.two-btns {
     display: flex;
+    justify-content: flex-end;
     gap: 10px;
-  margin-left: 150px;
-  margin-top: 20px;
+    margin-top: 15px;
+}
 
+.cancel-btn {
+    background-color: #ef4444;
+    border-radius: 6px;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    font-weight: 600;
+    cursor: pointer;
 }
-input{
-    margin-bottom: 10px;
-    width: 300px;
-    margin-left: 20px;
-}
-.name,.description,.parent-category{
-    margin-bottom: 10px;
-     margin-left: 20px;
-}
-.select-none{
- margin-bottom: 10px;
-    width: 300px;
-    margin-left: 20px;
+
+.addCategory-btn {
+    background-color: #10b981;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    padding: 8px 18px;
+    font-weight: 600;
+    cursor: pointer;
 }
