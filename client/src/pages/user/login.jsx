@@ -47,7 +47,7 @@ localStorage.setItem("role", res.data.role);
    if (res.data.role === "admin") {
   navigate("/admin");
 } else {
-  navigate("/main");
+  navigate("/");
 }
 
   } catch (error) {

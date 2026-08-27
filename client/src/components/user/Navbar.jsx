@@ -32,8 +32,8 @@ export const Navbar = () => {
           <div className="menu">
             <Link
               style={{ color: "rgb(8, 8, 84)", fontWeight: 500 }}
-              to="/Main"
-              className={`navbar-brand ${location.pathname === "/Main" ? "active" : ""}`}
+              to="/"
+              className={`navbar-brand ${location.pathname === "/" ? "active" : ""}`}
             >
               Home
             </Link>

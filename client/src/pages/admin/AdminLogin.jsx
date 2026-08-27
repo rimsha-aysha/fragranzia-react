@@ -54,7 +54,7 @@ export const Login=()=>{
    if (res.data.role === "admin") {
   navigate("/dashboard");
 } else {
-  navigate("/main");
+  navigate("/");
 }
 
   } catch (error) {
