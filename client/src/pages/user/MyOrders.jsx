@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./MyOrders.css";
-import axios from "axios";
+import axios from "../../axios";
 
 import { FaCalendarAlt } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
@@ -27,7 +27,7 @@ const token = localStorage.getItem("token");
 const getMyOrders = async () => {
   try {
     const res = await axios.get(
-      "http://localhost:5000/api/orders/my-orders",
+      "/api/orders/my-orders",
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -47,7 +47,7 @@ const getMyOrders = async () => {
       const token = localStorage.getItem("token");
 
       await axios.put(
-        `http://localhost:5000/api/orders/${selectedOrder._id}`,
+        `/api/orders/${selectedOrder._id}`,
         {
           status: "Return Pending Review",
           returnReason: returnData.reason,
@@ -79,7 +79,7 @@ const getMyOrders = async () => {
       const token = localStorage.getItem("token");
 
       await axios.put(
-        `http://localhost:5000/api/orders/cancel/${id}`,
+        `/api/orders/cancel/${id}`,
         {},
         {
           headers: {

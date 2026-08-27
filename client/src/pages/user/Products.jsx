@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import axios from "../../axios";
 import "./Product.css";
 
 import { BsSliders } from "react-icons/bs";
@@ -31,7 +31,7 @@ const Products = () => {
   const fetchProducts = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/product"
+        "/api/product"
       );
 
       console.log("API Response:", response.data);

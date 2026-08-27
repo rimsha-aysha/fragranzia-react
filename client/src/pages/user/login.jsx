@@ -5,7 +5,7 @@ import { IoPerson } from "react-icons/io5";
 import { IoMdMail } from "react-icons/io";
 import { FaGoogle } from "react-icons/fa";
 import { IoLogoFacebook } from "react-icons/io5";
-import axios from "axios";
+import axios from "../../axios";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -29,7 +29,7 @@ export const Login=()=>{
   try {
 
     const res = await axios.post(
-      "http://localhost:5000/api/signUp/login",
+      "/api/signUp/login",
       formData
     );
 

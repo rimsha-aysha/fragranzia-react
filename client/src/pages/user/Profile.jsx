@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import "./Profile.css";
 import { FaEyeSlash } from "react-icons/fa";
 
-import axios from "axios";
+import axios from "../../axios";
 const Profile = () => {
   const [profile, setProfile] = useState({
   name: "",

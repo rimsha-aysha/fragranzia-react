@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./SignUp.css";
-import axios from "axios";
+import axios from "../../axios";
 import { IoPerson } from "react-icons/io5";
 import { IoMdMail } from "react-icons/io";
 import { IoLockClosedSharp } from "react-icons/io5";
@@ -30,7 +30,7 @@ const SignUp = () => {
 
     try {
       const response = await axios.post(
-  "http://localhost:5000/api/signUp",
+  "/api/signUp",
   formData
 );
 

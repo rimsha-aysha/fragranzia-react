@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Checkout.css";
 
 import { useNavigate, useLocation } from "react-router-dom";
-import axios from "axios";
+import axios from "../../axios";
 
 const Checkout = () => {
   const navigate = useNavigate();
@@ -43,7 +43,7 @@ const products = location.state?.products || [];
 
       for (const item of products) {
         await axios.post(
-          "http://localhost:5000/api/orders",
+          "/api/orders",
           {
             productId: item._id,
             quantity: item.quantity,

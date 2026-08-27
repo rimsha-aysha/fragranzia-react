@@ -1,22 +1,25 @@
 import React, { useState, useEffect } from "react";
 import "./Main.css";
 
-import axios from "axios";
+import axios from "../../axios";
 import { useNavigate } from "react-router-dom";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 import Swal from "sweetalert2";
 
 export const Main = () => {
+   
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   useEffect(() => {
     fetchProducts();
   }, []);
 
+  
+
   const fetchProducts = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/product"
+        "/api/product"
       );
 
       console.log("API Response:", response.data);
@@ -133,6 +136,7 @@ export const Main = () => {
       image: "https://www.scentstore.com/wp-content/uploads/elementor/thumbs/YSL_Libre_Intense_90-ovlu40u5xmn1vhiga8wfv6mrt6ea4qnx1l99ye2rg0.jpg"
     }
   ];
+ 
 
 
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
+import axios from "../../axios";
 import { useNavigate } from "react-router-dom";
 import "./Single.css";
 import { FaStar, FaPlus, FaMinus, FaTag } from "react-icons/fa";
@@ -16,7 +16,7 @@ const navigate = useNavigate();
   const fetchProduct = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/product/${id}`
+        `/api/product/${id}`
       );
       console.log(res.data);
 
