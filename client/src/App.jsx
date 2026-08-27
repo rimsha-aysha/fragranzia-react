@@ -39,7 +39,7 @@ import AdminLogin from "./pages/admin/AdminLogin";
 <Route path="/login" element={<Login />} />
  <Route path="/adminlogin" element={<AdminLogin />} />
 <Route element={<UserLayout />}>
-  <Route path="/main" element={<Main />} />
+  <Route path="/" element={<Main />} />
   <Route path="/products" element={<Products />} />
   <Route path="/about" element={<About />} />
   <Route path="/single/:id" element={<Single />} />
