@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import axios from "../../axios";
 import "./Product.css";
 
@@ -23,6 +23,7 @@ export const Products = () => {
 
   const [sortOption, setSortOption] = useState("Relevance");
   const [showFilter, setShowFilter] = useState(false);
+  const filterRef = useRef(null);
 
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [minPrice, setMinPrice] = useState("");
@@ -37,6 +38,22 @@ export const Products = () => {
   useEffect(() => {
     fetchProducts();
   }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (filterRef.current && !filterRef.current.contains(event.target)) {
+        setShowFilter(false);
+      }
+    };
+    if (showFilter) {
+      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener("touchstart", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
+  }, [showFilter]);
 
   const fetchProducts = async () => {
     try {
@@ -324,11 +341,14 @@ export const Products = () => {
 
           {/* FILTER BUTTON */}
 
-          <div className="filter-container">
+          <div className="filter-container" ref={filterRef}>
 
             <div
-              className="filter-icon"
+              className={`filter-icon ${showFilter ? "active" : ""}`}
               onClick={() => setShowFilter(!showFilter)}
+              role="button"
+              tabIndex={0}
+              aria-label="Toggle Filter Dropdown"
             >
               <span>Filter</span>
               <BsSliders />
@@ -336,52 +356,29 @@ export const Products = () => {
 
             {showFilter && (
               <div className="filter-dropdown">
-
-                <div
-                  onClick={() => {
-                    handleSort("Relevance");
-                    setShowFilter(false);
-                  }}
-                >
-                  Relevance
-                </div>
-
-                <div
-                  onClick={() => {
-                    handleSort("Newest First");
-                    setShowFilter(false);
-                  }}
-                >
-                  Newest First
-                </div>
-
-                <div
-                  onClick={() => {
-                    handleSort("Popularity");
-                    setShowFilter(false);
-                  }}
-                >
-                  Popularity
-                </div>
-
-                <div
-                  onClick={() => {
-                    handleSort("Price: Low to High");
-                    setShowFilter(false);
-                  }}
-                >
-                  Price: Low to High
-                </div>
-
-                <div
-                  onClick={() => {
-                    handleSort("Price: High to Low");
-                    setShowFilter(false);
-                  }}
-                >
-                  Price: High to Low
-                </div>
-
+                {[
+                  "Relevance",
+                  "Newest First",
+                  "Popularity",
+                  "Price: Low to High",
+                  "Price: High to Low",
+                ].map((option) => (
+                  <div
+                    key={option}
+                    className={`filter-dropdown-item ${
+                      sortOption === option ? "active" : ""
+                    }`}
+                    onClick={() => {
+                      handleSort(option);
+                      setShowFilter(false);
+                    }}
+                  >
+                    <span>{option}</span>
+                    {sortOption === option && (
+                      <span className="check-icon">✓</span>
+                    )}
+                  </div>
+                ))}
               </div>
             )}
 

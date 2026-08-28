@@ -4,6 +4,9 @@
 
 .Showpage-body {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .Show-page-main {
@@ -21,7 +24,7 @@
     color: white;
     border-radius: 5px;
     border: none;
-    padding: 6px 12px;
+    padding: 5px 12px;
     cursor: pointer;
     font-size: 13px;
     transition: opacity 0.2s ease;
@@ -41,7 +44,7 @@
     background-color: white;
     border: 1.5px solid #28a745;
     color: #28a745;
-    padding: 5px 12px;
+    padding: 4px 10px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 13px;
@@ -58,7 +61,7 @@
     background-color: white;
     border: 1.5px solid #dc3545;
     color: #dc3545;
-    padding: 5px 12px;
+    padding: 4px 10px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 13px;
@@ -75,9 +78,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px;
+    margin: 10px 15px;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 12px;
 }
 
 .ex-im-btn {
@@ -99,7 +102,7 @@
     background-color: rgb(17, 156, 17);
     border-radius: 7px;
     color: white;
-    height: 40px;
+    height: 38px;
     padding: 0 16px;
     border: none;
     cursor: pointer;
@@ -118,8 +121,8 @@
 
 .input-category {
     display: flex;
-    gap: 15px;
-    margin: 15px 20px;
+    gap: 12px;
+    margin: 8px 15px 12px;
     flex-wrap: wrap;
     align-items: center;
 }
@@ -181,37 +184,59 @@
 }
 
 .table-div-showpage {
-    margin: 10px 20px;
+    margin: 0 15px;
     background: white;
     border-radius: 10px;
-    padding: 10px;
+    padding: 0;
+    max-height: calc(100vh - 205px);
+    overflow-y: auto;
     overflow-x: auto;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     box-sizing: border-box;
+    border: 1px solid #f1f5f9;
+}
+
+/* Custom scrollbars */
+.table-div-showpage::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.table-div-showpage::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+.table-div-showpage::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
 }
 
 /* Keep the table full width */
 table {
     width: 100%;
     min-width: 700px;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
 }
 
 th {
     background: #f8fafc;
-    padding: 12px 10px;
+    padding: 10px 12px;
     text-align: left;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     color: #475569;
     border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 5;
 }
 
 td {
-    padding: 12px 10px;
+    padding: 9px 12px;
     background: white;
     border-bottom: 1px solid #f1f5f9;
-    font-size: 14px;
+    font-size: 13px;
     color: #334155;
     vertical-align: middle;
 }

@@ -106,11 +106,11 @@ const Dashboard = () => {
 
   // SVG dimensions for Line Chart
   const svgWidth = 620;
-  const svgHeight = 220;
-  const paddingLeft = 45;
-  const paddingRight = 25;
-  const paddingTop = 25;
-  const paddingBottom = 40;
+  const svgHeight = 175;
+  const paddingLeft = 40;
+  const paddingRight = 20;
+  const paddingTop = 20;
+  const paddingBottom = 32;
   const plotWidth = svgWidth - paddingLeft - paddingRight;
   const plotHeight = svgHeight - paddingTop - paddingBottom;
 
@@ -162,10 +162,10 @@ const Dashboard = () => {
     0
   );
 
-  const cx = 135;
-  const cy = 110;
-  const rOuter = 78;
-  const rInner = 52;
+  const cx = 110;
+  const cy = 85;
+  const rOuter = 65;
+  const rInner = 42;
 
   let currentAngle = -Math.PI / 2;
   const donutSlices = Object.entries(categorySalesMap).map(
@@ -400,7 +400,7 @@ const Dashboard = () => {
           </div>
 
           <div className="donut-chart-container">
-            <svg viewBox="0 0 270 210" className="donut-chart-svg">
+            <svg viewBox="0 0 220 170" className="donut-chart-svg">
               {donutSlices.map((slice, i) => (
                 <path
                   key={i}
