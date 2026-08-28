@@ -6,133 +6,164 @@ import { IoMdMail } from "react-icons/io";
 import { FaGoogle } from "react-icons/fa";
 import { IoLogoFacebook } from "react-icons/io5";
 import axios from "../../axios";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
-export const Login=()=>{
+export const Login = () => {
   const navigate = useNavigate();
-    const [formData, setFormData] = useState({
-      email: "",
-      password: ""
-    });  
-     const handleChange = (e) => {
+
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
- const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
 
-  try {
+    try {
+      const res = await axios.post(
+        "/api/signUp/login",
+        formData
+      );
 
-    const res = await axios.post(
-      "/api/signUp/login",
-      formData
-    );
+      const { token, role, user } = res.data;
 
-    localStorage.setItem("token", res.data.token);
-localStorage.setItem("role", res.data.role);
+      localStorage.setItem("token", token);
+      localStorage.setItem("role", role || "user");
 
-  await Swal.fire({
-  icon: "success",
-  title: "Success",
-  text: "Login Successful",
-  timer: 1500,
-  showConfirmButton: false,
-});
+      if (user) {
+        localStorage.setItem("user", JSON.stringify(user));
+      }
 
-   if (res.data.role === "admin") {
-  navigate("/admin");
-} else {
-  navigate("/");
-}
+      await Swal.fire({
+        icon: "success",
+        title: "Success",
+        text:
+          role === "admin"
+            ? "Welcome back, Admin!"
+            : "Login Successful",
+        timer: 1500,
+        showConfirmButton: false,
+      });
 
-  } catch (error) {
+      if (role === "admin") {
+        navigate("/dashboard");
+      } else {
+        navigate("/");
+      }
 
-  await Swal.fire({
-  icon: "error",
-  title: "Login Failed",
-  text: error.response?.data?.message || "Invalid email or password",
-});
+    } catch (error) {
+      await Swal.fire({
+        icon: "error",
+        title: "Login Failed",
+        text:
+          error.response?.data?.message ||
+          "Invalid email or password",
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
 
-  }
-};
+  return (
+    <div>
+      <div className="main-l">
 
-    return(
-        <div>
-             <div className="main-l">
-    <div className="img-l">
-            <h1>Let's Gets Started!</h1>
-            <p>Create your account and Unlock the <br/>full potential of Fragranzia.</p>
+        <div className="img-l">
+          <h1>Let's Gets Started!</h1>
+          <p>
+            Create your account and Unlock the <br />
+            full potential of Fragranzia.
+          </p>
         </div>
-        <form className='text' onSubmit={handleSubmit}>
-       
-        <div className="text-l">
-          <div className="button-l"> 
-            <button className="btn1-l"><FaGoogle className="google-icon-l" />
-             Google</button>
-        <button className="btn1-l"><IoLogoFacebook className='facebook-icon-l' />
-                Facebook</button>
+
+        <form className="text" onSubmit={handleSubmit}>
+
+          <div className="text-l">
+
+            <div className="button-l">
+              <button type="button" className="btn1-l">
+                <FaGoogle className="google-icon-l" />
+                Google
+              </button>
+
+              <button type="button" className="btn1-l">
+                <IoLogoFacebook className="facebook-icon-l" />
+                Facebook
+              </button>
             </div>
 
-             <div className="line-l">
-                {/* <hr className="hr-l"></hr> */}
-                <div className="example-l">
-                    <div>or sign up with email</div>
-                {/* <div><hr className="hr-l"></hr></div> */}
-                </div>
+            <div className="line-l">
+              <div className="example-l">
+                <div>or sign up with email</div>
+              </div>
             </div>
-             
 
             <div className="btn2-l">
-                <div className="just-l">
-                  <input
-  type="email"
-  name="email"
-  placeholder="Enter your email"
-  value={formData.email}
-  onChange={handleChange}
-/>
-             <div > <IoPerson className="icon-l" /> </div>
-                </div>
 
-                <div className="just-l">
-                <input type="password"
-                    name="password"
-                    placeholder="Enter your password"
-                    value={formData.password}
-                    onChange={handleChange}/>
-               <div><IoMdMail className="icon-l"/></div>
+              <div className="just-l">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+
+                <div>
+                  <IoPerson className="icon-l" />
+                </div>
               </div>
 
-             </div>
+              <div className="just-l">
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Enter your password"
+                  value={formData.password}
+                  onChange={handleChange}
+                />
 
+                <div>
+                  <IoMdMail className="icon-l" />
+                </div>
+              </div>
 
-             <div className="forgot-l">
-            <a href="#"> Forgot password?</a>
-           </div>
+            </div>
 
-           <div className="btn3-l">
-                <button type="submit">Log In</button>
-             </div>
+            <div className="forgot-l">
+              <a href="#">Forgot password?</a>
+            </div>
+
+            <div className="btn3-l">
+              <button type="submit" disabled={loading}>
+                {loading ? "Logging In..." : "Log In"}
+              </button>
+            </div>
 
             <div className="last-l">
-  Don't have an Account? <Link to="/signup">Sign up</Link>
-</div>
+              Don't have an Account?{" "}
+              <Link to="/signup">Sign up</Link>
+            </div>
 
-        </div>
+          </div>
+
         </form>
-        
-    
 
+      </div>
+    </div>
+  );
+};
 
+export default Login;
 
-        </div>
-
-        </div>
-    )
-}
-export default Login

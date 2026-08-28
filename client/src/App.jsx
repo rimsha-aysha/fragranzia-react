@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import {BrowserRouter,Routes,Route} from "react-router-dom";
+import {BrowserRouter,Routes,Route,Navigate} from "react-router-dom";
 import './App.css'
 import SignUp from './pages/user/SignUp.jsx'
-import  Login  from './pages/user/login.jsx';
-import  Main  from './pages/user/Main.jsx';
-import  Products  from './pages/user/Products.jsx';
-import  Single from './pages/user/Single.jsx';
+import Login from './pages/user/login.jsx';
+import Main from './pages/user/Main.jsx';
+import Products from './pages/user/Products.jsx';
+import Single from './pages/user/Single.jsx';
 import ShowPage from './pages/admin/ShowPage.jsx';
 import ShowProduct from './pages/admin/ShowProduct.jsx';
 import AddProduct from './pages/admin/AddProduct.jsx'
@@ -26,8 +26,8 @@ import Checkout from './pages/user/CheckOut.jsx';
 import UserLayout from "./components/layout/UserLayout";
 import Dashboard from './pages/admin/Dashboard.jsx';
 import Customers from './pages/admin/Customers.jsx';
-import AdminLogin from "./pages/admin/AdminLogin";
-  function App(){
+
+function App(){
 
 
     return(
@@ -37,7 +37,6 @@ import AdminLogin from "./pages/admin/AdminLogin";
   
 <Route path="/signup" element={<SignUp />} />
 <Route path="/login" element={<Login />} />
- <Route path="/adminlogin" element={<AdminLogin />} />
 <Route element={<UserLayout />}>
   <Route path="/" element={<Main />} />
   <Route path="/products" element={<Products />} />

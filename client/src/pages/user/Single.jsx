@@ -44,7 +44,25 @@ if (!product) {
 }
 
 const addToCart = (product) => {
- 
+  const token = localStorage.getItem("token");
+
+  // User is not logged in
+  if (!token) {
+    Swal.fire({
+      icon: "warning",
+      title: "Login Required",
+      text: "Please login to add products to your cart.",
+      confirmButtonText: "Login",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        navigate("/login");
+      }
+    });
+
+    return;
+  }
+
+  // User is logged in
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
   cart.push(product);
@@ -52,12 +70,12 @@ const addToCart = (product) => {
   localStorage.setItem("cart", JSON.stringify(cart));
 
   Swal.fire({
-  icon: "success",
-  title: "Added!",
-  text: "Product added to cart successfully.",
-  timer: 1500,
-  showConfirmButton: false,
-});
+    icon: "success",
+    title: "Added!",
+    text: "Product added to cart successfully.",
+    timer: 1500,
+    showConfirmButton: false,
+  });
 
   navigate("/cart");
 };

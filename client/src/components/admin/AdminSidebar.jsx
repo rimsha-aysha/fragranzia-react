@@ -15,8 +15,10 @@ export const AdminSidebar = ({ isOpen, onClose }) => {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
+    localStorage.removeItem("role");
+    localStorage.removeItem("user");
     localStorage.removeItem("admin");
-    navigate("/adminlogin");
+    navigate("/login");
   };
 
   const handleNavClick = () => {
