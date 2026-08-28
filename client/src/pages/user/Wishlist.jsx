@@ -9,7 +9,7 @@ const getImageSrc = (image) => {
     if (image.startsWith("http://") || image.startsWith("https://") || image.startsWith("/")) {
       return image;
     }
-    return `http://localhost:5000/uploads/${image}`;
+    return `https://fragranzia-react.onrender.com/uploads/${image}`;
   }
   return "/perfume3-removebg-preview.png";
 };
